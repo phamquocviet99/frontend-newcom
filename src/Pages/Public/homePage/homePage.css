@@ -1,0 +1,279 @@
+/* Carousel Hero Image */
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+.carousel-inner .item > img {
+  -webkit-animation: zoom 20s;
+  animation: zoom 20s;
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-indicators {
+  display: none;
+}
+.carousel-control-prev {
+  display: none;
+}
+.carousel-control-next {
+  display: none;
+}
+.name-company-homepage > h2 {
+  font-size: 34px;
+  color: #585b32;
+  font-family: "Arima Madurai";
+  font-weight: medium;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.275);
+}
+.name-company-homepage > h3 {
+  font-size: 22px;
+  color: #777777;
+  font-family: "Antic Slab";
+  margin: 10px 0px;
+}
+.name-company-homepage > div {
+  width: 243px;
+  height: 4px;
+  background-color: #343434;
+}
+.content-about-homepage {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.content-about-homepage > i {
+  height: 49px;
+  width: 51px;
+  min-width: 51px;
+  background-image: url("../../../Images/logo/Vector.svg");
+  background-size: cover;
+  margin-right: 28px;
+}
+.content-about-homepage > p {
+  font-size: 19px;
+  font-family: "Times New Roman", Times, serif;
+  color: #343434;
+  text-align: justify;
+}
+.box-about {
+  border: 7px solid #3e7319;
+  padding-top: 29em;
+  margin-top: 90px;
+}
+.img-about {
+  position: absolute;
+  top: 130px;
+  right: -1em;
+  width: 350px;
+  height: 420px;
+  object-fit: cover;
+}
+.img-homepage-left {
+  width: 100%;
+  height: 445px;
+  object-fit: cover;
+}
+.img-homepage-right {
+  width: 100%;
+  height: 445px;
+  object-fit: cover;
+  position: absolute;
+  right: -1em;
+}
+.font-title {
+  font-size: 24px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.circle-icon-home {
+  height: 168px;
+  width: 168px;
+  border-radius: 50%;
+  background-color: #ba9765;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+.icon-home {
+  color: rgb(255, 255, 255);
+  font-size: 86px;
+}
+.box-circle-icon-home {
+  width: 100%;
+  background-color: #3e7319;
+}
+.box-txt-icon {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+.box-txt-icon > h4 {
+  font-size: 21px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 25px;
+}
+.content-cate-home {
+  background-color: #5d9090;
+}
+.box-cate-left {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.box-cate-right {
+  background-image: url("../../../Images/photocat.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.under-box-cate-right {
+  background-color: #343434e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  height: 100%;
+}
+.under-box-cate-right > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.content-box-cate-left {
+  display: flex;
+  align-items: center;
+}
+.content-box-cate-left > img {
+  width: 240px;
+  height: 217px;
+  object-fit: cover;
+}
+.content-cate-left {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.content-cate-left > h4 {
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+  color: #fdff89;
+  font-style: italic;
+}
+.content-cate-left > p {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  color: #ffffff;
+  padding: 20px;
+  text-align: justify;
+}
+.factory-home {
+  background-color: #f7ffde;
+}
+.factory-home-content {
+  padding: 30px 0px;
+}
+.bar-img-factory-1 > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin: 10px 0;
+}
+.bar-img-factory-2 > img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  margin: 10px 0;
+}
+.product-home {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  /* Carousel Hero Image */
+  .carousel-inner .item > img {
+    height: 50vh;
+  }
+  .name-company-homepage > h2 {
+    font-size: 24px;
+  }
+  .name-company-homepage > h3 {
+    font-size: 19px;
+  }
+  .name-company-homepage > div {
+    width: 50vw;
+  }
+
+  .box-about {
+    border: 7px solid #3e7319;
+    padding-top: 35em;
+    position: none;
+    margin-top: 20px;
+  }
+  .img-about {
+    position: none;
+    top: 50px;
+    left: 40px;
+    width: 80%;
+    object-fit: cover;
+  }
+  .img-homepage-left {
+    width: 100%;
+    height: 445px;
+    object-fit: cover;
+  }
+  .img-homepage-right {
+    display: none;
+  }
+  .content-box-cate-left {
+    display: block;
+    align-items: center;
+  }
+  .content-box-cate-left > img {
+    width: 100%;
+    height: 217px;
+    object-fit: cover;
+  }
+  .box-cate-left {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  .content-cate-left {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .content-cate-left > h4 {
+    text-align: center;
+    font-size: 24px;
+    font-family: "Times New Roman", Times, serif;
+    color: #fdff89;
+    font-style: italic;
+  }
+  .content-cate-left > p {
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    color: #ffffff;
+    padding: 0px;
+    text-align: justify;
+  }
+  .font-title {
+    font-size: 18px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

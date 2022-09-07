@@ -1,0 +1,147 @@
+header {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15rem;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.img-logo-navbar {
+  height: 83px;
+}
+
+.text {
+  text-transform: uppercase;
+  color: #626262;
+  font-size: 18px;
+  margin: 0 6px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.text:hover {
+  text-transform: uppercase;
+  color: #626262;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 6px;
+  text-decoration: none;
+}
+.text-active {
+  text-transform: uppercase;
+  color: #626262;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 6px;
+  text-decoration: none;
+}
+nav a {
+  margin: 0 2rem;
+  /* color: #eee; */
+  text-decoration: none;
+}
+nav a:hover {
+  text-transform: uppercase;
+  color: rgb(255, 235, 51);
+  font-size: 20px;
+  margin: 0 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+header > nav > a {
+  text-decoration: none;
+  color: #fff;
+}
+header > nav > a:link {
+  text-decoration: none;
+}
+
+header > nav > a:visited {
+  text-decoration: none;
+}
+
+header > nav > a:hover {
+  text-decoration: none;
+}
+
+header > nav > a:active {
+  text-decoration: none;
+}
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  /* color: #eee; */
+  visibility: hidden;
+  opacity: 0;
+  font-size: 3rem;
+  margin-right: 5px;
+}
+@media only screen and (max-width: 1024px) {
+  .text {
+    text-transform: uppercase;
+    color: #ffff;
+    font-size: 13px;
+    margin: 0 8px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .text:hover {
+    text-transform: uppercase;
+    color: rgb(255, 181, 53);
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 8px;
+    text-decoration: none;
+  }
+  .text-active {
+    text-transform: uppercase;
+    color: rgb(255, 181, 53);
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 8px;
+    text-decoration: none;
+  }
+  header {
+    padding: 0 3rem;
+  }
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    color: #eee;
+  }
+  header nav {
+    position: absolute;
+    z-index: 2000;
+    left: 0;
+    top: 83px;
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 60%;
+    height: 51vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: rgba(50, 50, 50, 0.933);
+    transition: 0.8s;
+    transform: translateX(-100vw);
+  }
+  header .responsive_nav {
+    transform: none;
+  }
+  nav .nav-close-btn {
+    font-size: 30px;
+  }
+  nav a {
+    font-size: 1.5rem;
+  }
+  header {
+    background-color: rgba(116, 116, 116, 0.95);
+    text-decoration: none;
+  }
+}

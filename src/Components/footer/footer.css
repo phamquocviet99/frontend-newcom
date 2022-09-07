@@ -1,0 +1,199 @@
+.background-footer {
+  background-image: url("../../Images/imageFooter.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content-top-footer {
+  background-color: #282828b3;
+}
+.box-name-footer {
+  display: flex;
+}
+.line-v-footer {
+  width: 8px;
+  background-color: white;
+}
+.name-company-footer {
+  padding: 5px 20px;
+}
+.name-company-footer > h3 {
+  font-size: 29px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+.name-company-footer > h4 {
+  margin-top: 20px;
+  font-size: 26px;
+  color: white;
+  font-family: "Arima Madurai";
+  font-weight: 500;
+}
+.info-company-footer {
+  padding: 10px 28px;
+}
+.info-company-footer > h6 {
+  font-size: 20px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  line-height: 35px;
+}
+.about-footer {
+  margin-top: 30px;
+}
+.first-about-footer {
+  margin-left: 100px;
+}
+.second-about-footer {
+  margin-top: 30px;
+}
+.bar-about-footer {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.bar-about-footer > p {
+  font-size: 18px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin: 0;
+}
+.circle-about-footer {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #0a919c;
+  margin-right: 25px;
+}
+.content-bot-footer {
+  background-color: #b97336bf;
+}
+.infor-design-footer {
+  margin: 5px 28px;
+}
+.infor-design-footer > p {
+  font-size: 17px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+  margin: 10px 0;
+}
+.bar-bot-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-social-footer {
+  background-color: #929292cb;
+  border-radius: 12px;
+  margin: 15px 0;
+  display: flex;
+  width: 168px;
+  margin-left: 200px;
+}
+.box-cicle-facebook {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../Images/logo/fb.svg");
+  background-size: cover;
+  margin: 8px;
+}
+.box-cicle-zalo {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../Images/logo/icon-zalo.png");
+  background-size: cover;
+  margin: 8px;
+}
+.box-cicle-google {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../Images/logo/google.svg");
+  background-size: cover;
+  margin: 8px;
+}
+.line-footer {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .line-v-footer {
+    display: none;
+  }
+  .name-company-footer {
+    padding: 5px 20px;
+  }
+  .name-company-footer > h3 {
+    font-size: 18px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+  }
+
+  .name-company-footer > h4 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+    font-family: "Arima Madurai";
+    font-weight: 500;
+  }
+  .info-company-footer {
+    padding: 0px 20px;
+  }
+  .info-company-footer > h6 {
+    font-size: 13px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .about-footer {
+    margin-top: 10px;
+  }
+  .first-about-footer {
+    margin-left: 20px;
+  }
+  .second-about-footer {
+    margin-left: 20px;
+  }
+  .bar-about-footer {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+  .bar-about-footer > p {
+    font-size: 12px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin: 0;
+  }
+  .line-footer {
+    margin-top: 30px;
+    padding: 0;
+    display: flex;
+
+    height: 2px;
+    width: 100%;
+    background-color: aliceblue;
+  }
+  .box-social-footer {
+    background-color: #929292cb;
+    border-radius: 12px;
+    margin: 15px 0;
+    display: flex;
+    width: 168px;
+    margin-left: 20px;
+  }
+  .infor-design-footer > p {
+    font-size: 13px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 300;
+    margin: 10px 0;
+  }
+}
