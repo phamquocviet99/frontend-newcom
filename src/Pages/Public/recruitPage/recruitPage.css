@@ -1,0 +1,24 @@
+.title-recruit > h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+.title-recruit > h3 > span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff8f3f;
+}
+.title-recruit > div {
+  height: 5px;
+  width: 340px;
+  background-color: #ff8f3f;
+}
+.title-recruit{
+    margin: 40px 0;
+}
+.hero-image-recruit {
+    background-image: url("../../../Images/recruit-hero-image.jpg");
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

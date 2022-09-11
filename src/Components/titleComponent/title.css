@@ -1,0 +1,16 @@
+.text-title > h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  color: #007049;
+  font-weight: bold;
+}
+.text-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.text-title > div {
+  width: 7%;
+  height: 5px;
+  background-color: #c35555;
+}

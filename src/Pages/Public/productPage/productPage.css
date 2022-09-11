@@ -1,0 +1,13 @@
+.hero-image-product {
+  background-image: url("../../../Images/Group\ 49.png");
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-category-product {
+  width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  border: 3px solid #007049;
+}

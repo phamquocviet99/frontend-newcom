@@ -1,0 +1,36 @@
+.container-table {
+  margin: 20px;
+}
+th,
+td {
+  font-size: 16px;
+}
+.icon-action {
+  font-size: 15px;
+}
+.btn-action {
+  padding-top: 8px;
+  margin: 0 10px;
+}
+.group-cate-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.box-add-item {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+  background-color: rgb(225, 225, 225);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.group-btn-action {
+  display: flex;
+  justify-content: end;
+  padding: 20px 0;
+}
+.group-btn-action > button {
+  margin-left: 20px;
+}

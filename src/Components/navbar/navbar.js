@@ -15,33 +15,33 @@ function Navbar() {
     {
       id: 1,
       name: "TRANG CHỦ",
-      link: "/",
+      link: "/trang-chu",
     },
     {
       id: 2,
       name: "GIỚI THIỆU ",
-      link: "/",
+      link: "/gioi-thieu",
     },
     {
       id: 3,
       name: "PHONG CÁCH",
-      link: "/",
+      link: "/phong-cach",
     },
     {
       id: 4,
-      name: "SẢN PHẨM",
-      link: "/",
+      name: "MẪU SẢN PHẨM",
+      link: "/san-pham",
     },
 
     {
       id: 7,
       name: "TUYỂN DỤNG",
-      link: "/",
+      link: "/tuyen-dung",
     },
     {
       id: 8,
       name: "LIÊN HỆ",
-      link: "/",
+      link: "/lien-he",
     },
   ];
   return (
@@ -49,7 +49,7 @@ function Navbar() {
       <a href="/">
         <img
           className="img-logo-navbar"
-          src={require("../../Images/Canva-Logo.png")}
+          src={require("../../Images/logo/LOGO.png")}
           alt="logo"
         />
       </a>

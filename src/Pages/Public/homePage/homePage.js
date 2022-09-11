@@ -5,6 +5,7 @@ import { BsFillAwardFill, BsFillBarChartFill } from "react-icons/bs";
 import { MdPeopleAlt } from "react-icons/md";
 import { GiFactory } from "react-icons/gi";
 import BoxProduct from "../../../Components/boxProduct/boxProduct";
+import BoxStyleHome from "../../../Components/boxStyleHome/boxStyleHome";
 function HomePage() {
   return (
     <div className="content-homepage">
@@ -79,7 +80,7 @@ function HomePage() {
       <article>
         <div className="container">
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-md-8 " style={{ padding: "0px" }}>
               <img
                 className="img-homepage-left"
                 alt=""
@@ -145,7 +146,7 @@ function HomePage() {
           </div>
         </div>
       </article>
-      <div style={{ height: "50px" }} />
+
       <article style={{ padding: "0" }}>
         <div className="content-cate-home">
           <div className="row">
@@ -231,9 +232,33 @@ function HomePage() {
       </div>
       <article>
         <div className="container">
+          <div className="style-home">
+            <h3 style={{ color: "#5d9090" }} className="font-title">
+              Bài viết và Phong cách
+            </h3>
+            <div>
+              <div className="row">
+                <div className="col-md-6">
+                  <BoxStyleHome />
+                  <BoxStyleHome />
+                  <BoxStyleHome />
+                </div>
+                <div className="col-md-6">
+          
+                  <BoxStyleHome />
+                  <BoxStyleHome />
+                  <BoxStyleHome />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article  style={{backgroundColor:"#F4F4F4"}}>
+        <div className="container">
           <div className="product-home">
             <h3 style={{ color: "#5d9090" }} className="font-title">
-              CÁC DÒNG SẢN PHẨM CỦA CHÚNG TÔI
+              CÁC Mẩu SẢN PHẨM
             </h3>
 
             <div className="row">

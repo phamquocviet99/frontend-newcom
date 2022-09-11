@@ -1,0 +1,51 @@
+.content-box-about {
+  margin-top: 50px;
+}
+.box-about-page {
+  border: 7px solid #ca7f3d;
+
+  margin-left: 20px;
+  padding: 20px 0;
+}
+.box-about-page > h2 {
+  font-size: 32px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  color: #383838;
+}
+.box-about-page > p {
+  font-size: 16px;
+  margin: 10px 50px;
+  text-align: justify;
+}
+.box-image-about {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.img-box-about-1 {
+  height: 100%;
+  width: 48%;
+  object-fit: cover;
+}
+.img-box-about-2 {
+  height: 100%;
+  width: 48%;
+  object-fit: cover;
+}
+.img-box-about-3{
+    margin-top: 19px;
+    height: 39%;
+    width: 100%;
+    object-fit: cover;
+}
+@media only screen and (max-width: 1024px) {
+    .box-about-page {
+        border: 7px solid #ca7f3d;
+      
+        margin-left: 0px;
+        padding: 20px 0;
+      }
+}

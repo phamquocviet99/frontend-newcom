@@ -1,0 +1,25 @@
+.box-recruit {
+  width: 100%;
+  margin-left: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgb(175, 175, 175);
+}
+.box-recruit:hover {
+  width: 100%;
+  margin-left: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 5px 5px 5px rgb(175, 175, 175);
+}
+.box-recruit > img {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.box-recruit > p {
+  margin: 20px;
+  text-align: justify;
+}

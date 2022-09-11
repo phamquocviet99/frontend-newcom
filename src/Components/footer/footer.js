@@ -1,7 +1,26 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import "./footer.css";
+import InformationApi from "../../Apis/InformationApi";
 
 function Footer() {
+  const [information, setInformation] = useState({});
+  useEffect(() => {
+    const fetchInformation = async () => {
+      try {
+        const response = await InformationApi.getById(
+          "631ad84a127721f9a7b6ed71"
+        );
+        const data = JSON.parse(JSON.stringify(response));
+
+        if (!data.error) {
+          setInformation(data.inforCompany);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchInformation();
+  }, []);
   return (
     <div>
       <div className="background-footer">
@@ -18,16 +37,15 @@ function Footer() {
                 </div>
                 <div className="info-company-footer">
                   <h6>
-                    Địa chỉ : Số 248A Phan Bội Châu, P Trần Hưng Đạo,
-                    <br /> TP Qui Nhơn, Bình Định
+                    Địa chỉ : {information?.address}
                   </h6>
-                  <h6>Hotline : 0909676848</h6>
-                  <h6>Email : galaxysynthetic@gmail.com</h6>
+                  <h6>Hotline : {information?.phone}</h6>
+                  <h6>Email : {information?.email}</h6>
                 </div>
               </div>
               <div className="col-md-6">
                 <div className="about-footer">
-                  <div className="first-about-footer">
+                  <div className="second-about-footer">
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
                       <p>Đồ nội thất mây, đan lát</p>
@@ -48,7 +66,7 @@ function Footer() {
                     </div>
                   </div>
                   <div className="line-footer"></div>
-                  <div className="second-about-footer">
+                  <div className="first-about-footer">
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
                       <p>Tổng doanh thu hàng năm : 8-10 triệu USE </p>
@@ -82,7 +100,6 @@ function Footer() {
               </div>
               <div className="col-md-6">
                 <div>
-            
                   <div className="box-social-footer">
                     <a href="/" className="box-cicle-facebook" />
                     <a href="/" className="box-cicle-zalo" />
