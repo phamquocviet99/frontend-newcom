@@ -1,7 +1,6 @@
 .hero-image-about{
-    background-image: url("../../../Images//hero-image-about.png");
-  
-   height: 70vh;
+    background-image: url("../../../Images/hero-about.png");
+   height: 80vh;
    background-repeat: no-repeat;
    background-size: cover;
 

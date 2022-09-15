@@ -5,8 +5,9 @@ import {
   FaArrowAltCircleUp,
   FaArrowAltCircleLeft,
 } from "react-icons/fa";
-
-function Navbar() {
+import { withTranslate } from 'react-redux-multilingual'
+function Navbar(props) {
+  const { translate } = props;
   const navRef = useRef();
   const showNavBar = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -14,33 +15,33 @@ function Navbar() {
   const listItem = [
     {
       id: 1,
-      name: "TRANG CHỦ",
+      name: translate('homepage'),
       link: "/trang-chu",
     },
     {
       id: 2,
-      name: "GIỚI THIỆU ",
+      name:  translate('about'),
       link: "/gioi-thieu",
     },
     {
       id: 3,
-      name: "PHONG CÁCH",
+      name:  translate('collections'),
       link: "/phong-cach",
     },
     {
       id: 4,
-      name: "MẪU SẢN PHẨM",
+      name: translate('product'),
       link: "/san-pham",
     },
 
     {
       id: 7,
-      name: "TUYỂN DỤNG",
+      name: translate('recruitment'),
       link: "/tuyen-dung",
     },
     {
       id: 8,
-      name: "LIÊN HỆ",
+      name:  translate('contact'),
       link: "/lien-he",
     },
   ];
@@ -59,13 +60,12 @@ function Navbar() {
           <a
             href={item.link}
             key={item.id}
-            className="text"
-            // className={
-            //   "/" + window.location.pathname.split("/").slice(1)[0] ===
-            //   item.link
-            //     ? "text-active "
-            //     : "text"
-            // }
+            className={
+              "/" + window.location.pathname.split("/").slice(1)[0] ===
+              item.link
+                ? "text-active"
+                : "text"
+            }
             style={{ textDecoration: "none" }}
           >
             {item.name}
@@ -83,4 +83,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default withTranslate(Navbar);

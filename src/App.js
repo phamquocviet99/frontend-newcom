@@ -19,6 +19,7 @@ import ContactPage from "./Pages/Public/contactPage/contactPage";
 import DetailRecruitPage from "./Pages/Public/detailRecruitPage/detailRecruitPage";
 import DetailStylePage from "./Pages/Public/detailStylePage/detailStylePage";
 import HomePage from "./Pages/Public/homePage/homePage";
+import DetailProductPage from "./Pages/Public/detailProductPage/detailProductPage";
 import ProductPage from "./Pages/Public/productPage/productPage";
 import RecruitPage from "./Pages/Public/recruitPage/recruitPage";
 import StylePage from "./Pages/Public/stylePage/stylePage";
@@ -29,10 +30,16 @@ import UpdateCategoryProduct from "./Pages/Admin/CategoryProduct/UpdateCategoryP
 import RecruitPageAdmin from "./Pages/Admin/Recruit/Recruit";
 import RecruitCreate from "./Pages/Admin/Recruit/CreateRecruit";
 import RecruitUpdate from "./Pages/Admin/Recruit/UpdateRecruit";
-import Product from "./Pages/Admin/Product/Product"
+import Product from "./Pages/Admin/Product/Product";
 import CreateProduct from "./Pages/Admin/Product/CreateProduct";
 import UpdateProduct from "./Pages/Admin/Product/UpdateProduct";
 import DetailProduct from "./Pages/Admin/Product/DetailProduct";
+import UserAdmin from "./Pages/Admin/User/UserAdmin";
+import News from "./Pages/Admin/News/News";
+import CreateNews from "./Pages/Admin/News/CreateNews";
+import UpdateNews from "./Pages/Admin/News/UpdateNews";
+import Message from "./Pages/Admin/Message/Message";
+import Partner from "./Pages/Admin/Partner/Partner";
 
 function ClientLayout() {
   return (
@@ -66,11 +73,15 @@ function App() {
           <Route path="/trang-chu" element={<HomePage />} />
           <Route path="/gioi-thieu" element={<AboutPage />} />
           <Route path="/san-pham" element={<ProductPage />} />
+          <Route path="/san-pham/:id" element={<DetailProductPage />} />
           <Route path="/phong-cach" element={<StylePage />} />
           <Route path="/tuyen-dung" element={<RecruitPage />} />
           <Route path="/lien-he" element={<ContactPage />} />
-          <Route path="/chi-tiet-bai-viet" element={<DetailStylePage />} />
-          <Route path="/chi-tiet-tuyen-dung" element={<DetailRecruitPage />} />
+          <Route path="/chi-tiet-bai-viet/:id" element={<DetailStylePage />} />
+          <Route
+            path="/chi-tiet-tuyen-dung/:id"
+            element={<DetailRecruitPage />}
+          />
         </Route>
         <Route path="/dang-nhap" element={<Login />} />
         <Route path="/admin" element={<AdminLayout />}>
@@ -100,17 +111,13 @@ function App() {
           />
 
           <Route path="/admin/doi-mat-khau" element={<ChangePassword />} />
-          {/* <Route path="/admin/nguoi-dung" element={<UserAdmin />} /> */}
+          <Route path="/admin/nguoi-dung" element={<UserAdmin />} />
           <Route path="/admin/nguoi-dung/tao" element={<SignIn />} />
           <Route path="/admin/cap-nhap-thong-tin" element={<UpdateInfor />} />
-          {/* <Route path="/admin/tin-tuc" element={<NewsPageAdmin />} />
-          <Route path="/admin/tin-tuc/tao" element={<NewsCreatePage />} />
-          <Route
-            path="/admin/tin-tuc/cap-nhat/:id"
-            element={<NewsUpdatePage />}
-          />
-         
-          /> */}
+          <Route path="/admin/tin-tuc" element={<News />} />
+          <Route path="/admin/tin-tuc/tao-moi" element={<CreateNews />} />
+          <Route path="/admin/tin-tuc/cap-nhat/:id" element={<UpdateNews />} />
+
           <Route path="/admin/san-pham" element={<Product />} />
           <Route path="/admin/san-pham/tao-moi" element={<CreateProduct />} />
           <Route path="/admin/san-pham/:id" element={<DetailProduct />} />
@@ -118,8 +125,8 @@ function App() {
             path="/admin/san-pham/cap-nhat/:id"
             element={<UpdateProduct />}
           />
-          {/* <Route path="/admin/doi-tac" element={<Partner />} />
-          <Route path="/admin/thu-khach-hang" element={<MessameAdmin />} /> */}
+          <Route path="/admin/doi-tac" element={<Partner />} />
+          <Route path="/admin/thu-khach-hang" element={<Message />} />
         </Route>
       </Routes>
     </Router>

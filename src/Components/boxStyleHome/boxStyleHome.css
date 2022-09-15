@@ -1,16 +1,16 @@
 .box-style-home > img {
   height: 100px;
-  width: 150px;
+  min-width: 150px;
   object-fit: cover;
   transition: 0.2s;
 }
 .box-style-home > img:hover {
-    height: 100px;
-    width: 150px;
-    object-fit: cover;
-    transform: scale(1.1);
-    transition: 0.2s;
-  }
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
 .box-style-home {
   margin-top: 20px;
   display: flex;
@@ -18,21 +18,22 @@
   transition: 0.2s;
 }
 .box-style-home:hover {
-    margin-top: 20px;
-    display: flex;
-    background-color: #d4d4d4;
-    transition: 0.2s;
-  }
+  margin-top: 20px;
+  display: flex;
+  background-color: #d4d4d4;
+  transition: 0.2s;
+}
 .content-style-home {
   margin-left: 20px;
   margin-right: 20px;
+  width: 100%;
 }
 .content-style-home > h3 {
   font-size: 18px;
 }
 .content-style-home > p {
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+
   color: rgb(136, 136, 136);
 }
 .decor-box-style-home {
@@ -47,7 +48,7 @@
 .decor-box-style-home:hover {
   height: 100px;
   width: 50px;
-  background-color:#f4f4f4;
+  background-color: #f4f4f4;
   display: flex;
   align-items: center;
   color: #326a09;

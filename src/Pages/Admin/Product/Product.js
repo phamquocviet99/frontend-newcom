@@ -3,7 +3,6 @@ import "./Product.css";
 import { Table } from "react-bootstrap";
 import CategoryProductApi from "../../../Apis/CategoryProductApi";
 import ProductApi from "../../../Apis/ProductApi";
-import useFirebase from "../../../Apis/firebaseCD";
 import { deleteObject, ref } from "firebase/storage";
 import { storage } from "../../../Apis/FirebaseConfig";
 
@@ -78,12 +77,42 @@ function Product() {
         console.log("not");
       });
   }
+  const FetchFullProduct = async () => {
+    try {
+      const response = await ProductApi.getAll();
+      const data = JSON.parse(JSON.stringify(response));
+      if (!data.error) {
+        setListProduct(data.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  function handleGetProjectbyIDCategory(e) {
+    if (e.target.value === "DEFAULT") {
+      FetchFullProduct();
+    } else {
+      getProductbyIDCategory(e.target.value);
+    }
+  }
+  const getProductbyIDCategory = async (id) => {
+    try {
+      const response = await ProductApi.getByIdCate(id);
+      const data = JSON.parse(JSON.stringify(response));
+      if (!data.error) {
+        setListProduct(data.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="container-table">
       <h2 className="title-page-admin">Danh sách các mẫu sản phẩm</h2>
       <div style={{ justifyContent: "space-around" }} className="box-add-item">
         <div className="form-group-1">
           <select
+            onChange={handleGetProjectbyIDCategory}
             defaultValue="DEFAULT"
             className="form-control form-control-1 "
           >

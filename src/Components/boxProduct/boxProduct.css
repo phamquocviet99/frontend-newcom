@@ -1,4 +1,4 @@
-.content-project-1 {
+/* .content-project-1 {
   background: rgba(0, 0, 0, 0.645);
   width: 100%;
   padding: 20px;
@@ -40,4 +40,25 @@
     background-position: center;
     background-image: url("../../Images//img-about.webp");
   }
+} */
+.box-product > img {
+  height: 250px;
+  width: 270px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.box-product > img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s;
+  background-color: rgba(243, 243, 243, 0.274);
+}
+.box-product > p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.box-product {
+margin-top: 20px;
 }

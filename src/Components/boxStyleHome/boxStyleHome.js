@@ -1,21 +1,22 @@
 import React from "react";
 import "./boxStyleHome.css";
 
-function BoxStyleHome() {
+function BoxStyleHome({ news }) {
   return (
-    <div className="box-style-home">
-      <img
-        alt=""
-        src={require("../../Images/infinity-chaise-longue-ambient-01-293837_800x.webp")}
-      />
+    <a href={`/chi-tiet-bai-viet/${news?._id}`} className="box-style-home">
+      <img alt="" src={news?.urlImage} />
+      
       <div className="content-style-home">
-        <h3>Elvis Phương - Tình Khúc Vượt Thời Gian</h3>
-        <p>Ngày đăng : 27/2/2022</p>
+        <h3>{news?.name}</h3>
+        <p>Ngày đăng : {news?.createdAt?.slice(0, 10)}</p>
       </div>
-      <a href="/" className="decor-box-style-home">
+      <a
+        href={`/chi-tiet-bai-viet/${news?._id}`}
+        className="decor-box-style-home"
+      >
         <p>MORE</p>
       </a>
-    </div>
+    </a>
   );
 }
 

@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.form-language{
+  color:#db0000;
+width: 120px;
+position: fixed;
+z-index: 2001;
+background-color: rgba(240, 255, 255, 0);
+right:20px;
+bottom: 20px;
+}

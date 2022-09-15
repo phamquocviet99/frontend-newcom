@@ -1,10 +1,10 @@
 import React from "react";
 import "./barCategory.css";
 
-function BarCategory() {
+function BarCategory({category}) {
   return (
     <div className="bar-category">
-      <h4>Mây, đan lát</h4>
+      <h4>{category?.name}</h4>
     </div>
   );
 }

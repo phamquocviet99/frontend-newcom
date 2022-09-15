@@ -76,29 +76,6 @@ const useFirebase = {
       return false;
     }
   },
-  deleteSingleFile: async (name, url) => {
-    try {
-      if (url) return;
-      const desertRef = ref(
-        storage,
-        `images/${url}/${name}`
-      );
-      deleteObject(desertRef)
-        .then(() => {
-          return true;
-        })
-        .catch((error) => {
-          return false;
-        });
-      return true;
-    } catch (error) {
-      return false;
-    }
-  },
-  deleteMultiFile: async (files, url) => {
-    try {
-    } catch (error) {}
-  },
 };
 
 export default useFirebase;

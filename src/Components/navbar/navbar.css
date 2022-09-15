@@ -1,10 +1,12 @@
 header {
+  position: absolute;
+  z-index: 2000;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15rem;
-  background-color: rgb(255, 255, 255);
+  padding: 5px 15rem;
+  background-color: rgba(255, 255, 255, 0.884);
   text-decoration: none;
 }
 .img-logo-navbar {
@@ -13,7 +15,7 @@ header {
 
 .text {
   text-transform: uppercase;
-  color: #626262;
+  color: #4d4d4d;
   font-size: 18px;
   margin: 0 6px;
   font-weight: 400;
@@ -21,7 +23,7 @@ header {
 }
 .text:hover {
   text-transform: uppercase;
-  color: #626262;
+  color: #003827;
   font-size: 18px;
   font-weight: 400;
   margin: 0 6px;
@@ -29,7 +31,7 @@ header {
 }
 .text-active {
   text-transform: uppercase;
-  color: #626262;
+  color: #003827;
   font-size: 18px;
   font-weight: 400;
   margin: 0 6px;
@@ -40,14 +42,7 @@ nav a {
   /* color: #eee; */
   text-decoration: none;
 }
-nav a:hover {
-  text-transform: uppercase;
-  color: rgb(255, 235, 51);
-  font-size: 20px;
-  margin: 0 6px;
-  font-weight: 600;
-  text-decoration: none;
-}
+
 header > nav > a {
   text-decoration: none;
   color: #fff;
@@ -141,7 +136,7 @@ header .nav-btn {
     font-size: 1.5rem;
   }
   header {
-    background-color: rgba(116, 116, 116, 0.95);
+    background-color: rgba(165, 165, 165, 0.95);
     text-decoration: none;
   }
 }

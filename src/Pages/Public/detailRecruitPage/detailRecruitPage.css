@@ -1,7 +1,15 @@
-.content-detail-recruit>h3{
-    font-size: 23px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    text-transform: uppercase;
+.content-detail-recruit {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgb(175 175 175);
+}
+.content-detail-recruit > h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.content-detail-recruit > strong {
+  font-size: 16px;
 
 }

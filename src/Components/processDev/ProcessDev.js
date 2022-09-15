@@ -1,15 +1,19 @@
 import React from "react";
 import "./ProcessDev.css";
-function ProcessDev() {
+import { withTranslate } from 'react-redux-multilingual'
+function ProcessDev(props) {
+  const { translate } = props;
   return (
     <div className="container">
       <div className="title-about">
         <h3 className="font-title text-center">
-          QUÁ TRÌNH PHÁT TRIỂN CỦA CÔNG TY
+          {translate('process')}
         </h3>
       </div>
       <div className="bar-process">
         <div
+        data-aos="fade-right"
+        data-aos-duration="2000"
           style={{ backgroundColor: "#ca7f3d" }}
           className="sub-bar-process-1"
         >
@@ -17,16 +21,17 @@ function ProcessDev() {
           <div className="content-bar">
             <div className="content-sub-bar">
               <div></div>
-              <p>Thành viên : 50 người</p>
+              <p>{translate('worker')} : 50</p>
             </div>
             <div style={{ height: "20px" }}></div>
             <div className="content-sub-bar">
               <div></div>
-              <p>Diện tích : 500 mét vuông </p>
+              <p>{translate('size')} : 500m2 </p>
             </div>
           </div>
         </div>
-        <div className="group-sub-bar-process-2">
+        <div  data-aos="fade-left"
+        data-aos-duration="2000" className="group-sub-bar-process-2">
           <div
             style={{ backgroundColor: "#ffb371" }}
             className="sub-bar-process-2"
@@ -35,16 +40,18 @@ function ProcessDev() {
             <div className="content-bar">
               <div className="content-sub-bar">
                 <div></div>
-                <p>50 người</p>
+                <p>{translate('worker')}: 50 </p>
               </div>
               <div style={{ height: "20px" }}></div>
               <div className="content-sub-bar">
                 <div></div>
-                <p> 500 mét vuông </p>
+                <p>{translate('size')}: 500m2</p>
               </div>
             </div>
           </div>
           <div
+           data-aos="fade-left"
+           data-aos-duration="2000"
             style={{ backgroundColor: "#ffc18a" }}
             className="sub-bar-process-3"
           >
@@ -57,14 +64,15 @@ function ProcessDev() {
               <div style={{ height: "20px" }}></div>
               <div className="content-sub-bar">
                 <div></div>
-                <p> 10.000 mét vuông </p>
+                <p>{translate('size')}: 10.000m2 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="bar-process">
-        <div className="group-sub-bar-process-2 fix-width">
+        <div  data-aos="fade-right"
+        data-aos-duration="2000" className="group-sub-bar-process-2 fix-width">
           <div
             style={{ backgroundColor: "#18DFEF" }}
             className="sub-bar-process-2 fix"
@@ -78,7 +86,7 @@ function ProcessDev() {
               <div style={{ height: "20px" }}></div>
               <div className="content-sub-bar">
                 <div></div>
-                <p> 10.000 mét vuông </p>
+                <p>{translate('size')}: 10.000m2 </p>
               </div>
             </div>
           </div>
@@ -90,17 +98,19 @@ function ProcessDev() {
             <div className="content-bar">
               <div className="content-sub-bar">
                 <div></div>
-                <p>200 người</p>
+                <p>{translate('worker')}: 200</p>
               </div>
               <div style={{ height: "20px" }}></div>
               <div className="content-sub-bar">
                 <div></div>
-                <p> 20.000 mét vuông </p>
+                <p>{translate('size')}: 20.000m2 </p>
               </div>
             </div>
           </div>
         </div>
         <div
+        data-aos="fade-left"
+        data-aos-duration="2000"
           style={{ backgroundColor: "#2C838A" }}
           className="sub-bar-process-1 fix-width"
         >
@@ -108,23 +118,23 @@ function ProcessDev() {
           <div className="content-bar">
             <div className="content-sub-bar">
               <div></div>
-              <p>Hơn 220 người</p>
+              <p>{translate('worker')}: +220</p>
             </div>
             <div style={{ height: "20px" }}></div>
             <div className="content-sub-bar">
               <div></div>
-              <p> 30.000 mét vuông </p>
+              <p>{translate('size')}: 30.000m2 </p>
             </div>
           </div>
           <div className="content-bar">
             <div className="content-sub-bar">
               <div></div>
-              <p>40*40HC conts/tháng</p>
+              <p>40*40HC conts/{translate('month')}</p>
             </div>
             <div style={{ height: "20px" }}></div>
             <div className="content-sub-bar">
               <div></div>
-              <p>Hơn 8 triệu USD/năm </p>
+              <p>{translate('usd')}</p>
             </div>
           </div>
         </div>
@@ -133,4 +143,4 @@ function ProcessDev() {
   );
 }
 
-export default ProcessDev;
+export default withTranslate(ProcessDev);

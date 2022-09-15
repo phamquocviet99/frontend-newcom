@@ -1,8 +1,19 @@
 import { React, useState, useEffect } from "react";
 import "./footer.css";
+import { withTranslate } from 'react-redux-multilingual'
 import InformationApi from "../../Apis/InformationApi";
+import { useParams } from "react-router-dom";
+import Aos from "aos";
 
-function Footer() {
+function Footer(props) {
+  const params = useParams();
+
+  useEffect(() => {
+
+    Aos.init({ duration: 2000 });
+  }, [params]);
+
+  const { translate } = props;
   const [information, setInformation] = useState({});
   useEffect(() => {
     const fetchInformation = async () => {
@@ -27,57 +38,59 @@ function Footer() {
         <div className="content-top-footer">
           <div className="container">
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-6"  data-aos="fade-right"
+                data-aos-duration="1500">
                 <div className="box-name-footer">
                   <div className="line-v-footer" />
                   <div className="name-company-footer">
-                    <h3>CÔNG TY TNHH TỔNG HỢP NGÂN HÀ</h3>
-                    <h4>GALAXY SYNTHETIC COMPANY</h4>
+                    <h3>{translate('nameCompany')}</h3>
+                    <h4>Outdoor & Indoor Furniture</h4>
                   </div>
                 </div>
                 <div className="info-company-footer">
                   <h6>
-                    Địa chỉ : {information?.address}
+                    {translate('address')} : {translate("comAddress")}
                   </h6>
                   <h6>Hotline : {information?.phone}</h6>
                   <h6>Email : {information?.email}</h6>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6"  data-aos="fade-left"
+                data-aos-duration="1500">
                 <div className="about-footer">
                   <div className="second-about-footer">
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
-                      <p>Đồ nội thất mây, đan lát</p>
+                      <p>{translate('des1')}</p>
                     </div>
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
                       <p>
-                        Đồ nội thất từ lục bình, các loại vật liệu thiên nhiên
+                      {translate('des2')}
                       </p>
                     </div>
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
-                      <p>Đồ nội thất nhựa giả mây PVC</p>
+                      <p>{translate('des3')}</p>
                     </div>
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
-                      <p>Các loại dây</p>
+                      <p>{translate('des4')}</p>
                     </div>
                   </div>
                   <div className="line-footer"></div>
                   <div className="first-about-footer">
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
-                      <p>Tổng doanh thu hàng năm : 8-10 triệu USE </p>
+                      <p>{translate('des5')}</p>
                     </div>
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
-                      <p>Diện tích công xưởng : hơn 20.000 mét vuông</p>
+                      <p>{translate('des6')}</p>
                     </div>
                     <div className="bar-about-footer">
                       <div className="circle-about-footer" />
-                      <p>Số lượng kỹ sư, công nhân viên : hơn 300 người</p>
+                      <p>{translate('des7')}</p>
                     </div>
                   </div>
                 </div>
@@ -91,7 +104,7 @@ function Footer() {
               <div className="col-md-6">
                 <div className="bar-bot-footer">
                   <div className="infor-design-footer">
-                    <p>Copyright © 2021 G.S.C, Vietnam. All Rights Reserved.</p>
+                    <p>Copyright 2022 © Galaxy Synthetic CO., LTD</p>
                     <p>
                       Designed by <a href="/">HBB Tech</a>.
                     </p>
@@ -115,4 +128,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default  withTranslate(Footer) ;

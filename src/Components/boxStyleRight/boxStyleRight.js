@@ -1,13 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./boxStyleRight.css";
 
-function BoxStyleRight() {
+function BoxStyleRight({ news }) {
   return (
-    <div className="box-style-right">
-      <img alt="" src={require("../../Images/img20170320085553667.webp")} />
-      <h3>Phong cách Art Deco được biết biết đến là một trường phái</h3>
-     
-    </div>
+    <a href={`/chi-tiet-bai-viet/${news._id}`}>
+      <div className="box-style-right">
+        <img alt="" src={news?.urlImage} />
+        <h3>{news?.name}</h3>
+      </div>
+    </a>
   );
 }
 

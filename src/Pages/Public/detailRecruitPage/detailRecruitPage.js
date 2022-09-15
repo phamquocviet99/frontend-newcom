@@ -1,40 +1,60 @@
+import { Markup } from "interweave";
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import { BiTimeFive } from "react-icons/bi";
+import { useParams } from "react-router-dom";
+import RecruitApi from "../../../Apis/RecruitApi";
 import BoxRecruit from "../../../Components/boxRecruit/boxRecruit";
 import "./detailRecruitPage.css";
-
-function DetailRecruitPage() {
+import { withTranslate } from 'react-redux-multilingual'
+function DetailRecruitPage(props) {
+  const { translate } = props;
+  const { id } = useParams();
+  const [recruit, setRecruit] = useState({});
+  useEffect(() => {
+    const FetchRecruit = async () => {
+      document.title = translate("recruitment");
+      try {
+        const response = await RecruitApi.getById(id);
+        const data = JSON.parse(JSON.stringify(response));
+        if (!data.error) {
+          setRecruit(data.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    FetchRecruit();
+  }, [id]);
   return (
     <div style={{ backgroundColor: "#e8e8e8" }}>
       <div className="hero-image-recruit"></div>
       <div className="container">
         <div className="title-recruit">
-          <h3>
-            Tin tuyển dụng <span>mới nhất</span>
+        <h3>
+            {translate('recruit')} <span> {translate('new')}</span>
           </h3>
           <div />
         </div>
         <div className="row">
           <div className="col-md-8">
             <div className="content-detail-recruit">
-              <h3>Tuyển kỹ sử lsdkhjdhksdsjdhsjd</h3>
-              <div className="time-detail">
+              <h3>{recruit?.name}</h3>
+              <div className="time-detail" style={{ marginBottom: "20px" }}>
                 <BiTimeFive style={{ fontSize: "20px" }} />
-                <p>9:9 - 2022</p>
+                <p>{recruit?.createdAt?.slice(0, 10)}</p>
               </div>
-              <div style={{ display: "flex", justifyContent: "end" }}>
-                <div className="line-detail"></div>
-              </div>
-              <div>
-                Công ty chúng tôi hoạt động trong môi trường chuyên nghiệp, đào
-                tạo nhân lực, và sử dụng những trang thiết bị bậc nhất. Với chế
-                độ đãi ngộ tốt với các thành viên công ty, hiện số lượng các kỹ
-                sư hơn 200 thành viên.
-              </div>
+              <strong>Phúc lợi : </strong>
+              <Markup content={recruit?.welfare}></Markup>
+              <strong>Mô tả công việc : </strong>
+              <Markup content={recruit?.description}></Markup>
+              <strong>Yêu cầu : </strong>
+              <Markup content={recruit?.requirements}></Markup>
             </div>
           </div>
           <div className="col-md-4">
-            <BoxRecruit />
+            <BoxRecruit about={translate('aboutRecruit')}/>
           </div>
         </div>
       </div>
@@ -42,4 +62,4 @@ function DetailRecruitPage() {
   );
 }
 
-export default DetailRecruitPage;
+export default withTranslate(DetailRecruitPage);

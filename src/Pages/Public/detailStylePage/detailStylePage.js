@@ -2,8 +2,53 @@ import React from "react";
 import "./detailStylePage.css";
 import { BiTimeFive } from "react-icons/bi";
 import BoxStyleRight from "../../../Components/boxStyleRight/boxStyleRight";
+import NewsApi from "../../../Apis/NewsApi";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { Markup } from "interweave";
 
 function DetailStylePage() {
+  const { id } = useParams();
+  const [news, setNews] = useState({});
+  const [listNews, setListNews] = useState([]);
+
+  useEffect(() => {
+    document.title = "TIN TỨC";
+    async function FetchNews() {
+      try {
+        const response = await NewsApi.getById(id);
+        const data = JSON.parse(JSON.stringify(response));
+        if (!data.error) {
+          setNews(data.data);
+        }
+      } catch (error) {
+        alert("Tải tin tức thất bại");
+        console.log(error);
+      }
+    }
+    FetchNews();
+  }, [id]);
+  useEffect(() => {
+    const FetchListNews = async () => {
+      try {
+        const response = await NewsApi.getAll({ page: 0, limit: 5 });
+        const data = JSON.parse(JSON.stringify(response));
+        if (!data.error) {
+          var listData = [];
+          for (const neww of data.data) {
+            if (neww._id !== id) {
+              listData.push(neww);
+            }
+          }
+          setListNews(listData);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    FetchListNews();
+  }, []);
   return (
     <div>
       <div className="hero-image-style" />
@@ -11,43 +56,27 @@ function DetailStylePage() {
         <div className="row">
           <div className="col-md-9">
             <div className="title-detail-style">
-              <h3>
-                Nghề thủ công Việt Nam vốn có truyền thống từ lâu đời. Truyền
-                thống đó gắn liền với nền văn minh lúa nước, gắn với những tên
-                làng nghề
-              </h3>
-              <div className="time-detail">
+              <h3>{news?.name}</h3>
+              <div className="time-detail mb-3">
                 <BiTimeFive style={{ fontSize: "20px" }} />
-                <p>9:9 - 2022</p>
-              </div>
-              <div style={{display:"flex",justifyContent:"end"}}>
-                
-                <div className="line-detail"></div>
+                <p>{news?.createdAt?.slice(0, 10)}</p>
               </div>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-9">
-            Phong cách Art Deco được biết biết đến là một trường phái nghệ
-            thuật, trang trí mang đậm tính chiết trung, ra đời vào năm 1920 ở
-            Paris và bắt đầu lan rộng ra toàn thế giới trong những năm 30. Phong
-            cách thiết kế này được pha trộn từ rất nhiều trường phái khác nhau
-            như tân cổ điển, hiện đại, tân nghệ thuật, lập thể, tương lai,…. Do
-            đó, nó có ảnh hưởng đến hầu hết các lĩnh vực thiết kế như nội thất,
-            kiến trúc, thời trang,… cùng nhiều môn nghệ thuật thị giác khác như
-            điện ảnh, hội họa.
+          <div className="col-md-9  mb-5">
+            <img className="avatar-news" alt="" src={news?.urlImage}></img>
+            <Markup content={news?.content}></Markup>
           </div>
           <div className="col-md-3">
             <div className="right-detail-style">
               <div className="name-detail-style">
                 <p>Tin tức liên quan</p>
               </div>
-              <BoxStyleRight />
-              <BoxStyleRight />
-              <BoxStyleRight />
-              <BoxStyleRight />
-              <BoxStyleRight />
+              {listNews?.map((news, index) => (
+                <BoxStyleRight news={news} />
+              ))}
             </div>
           </div>
         </div>

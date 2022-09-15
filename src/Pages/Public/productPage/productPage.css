@@ -11,3 +11,16 @@
   background-color: white;
   border: 3px solid #007049;
 }
+.contact-product-page {
+  margin-top: 20px;
+}
+.contact-product-page > h4 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #c35555;
+}
+.contact-product-page > p {
+font-style: italic;
+  margin: 0;
+  color: #c35555;
+}
