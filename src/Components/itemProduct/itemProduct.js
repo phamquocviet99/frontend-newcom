@@ -8,7 +8,7 @@ function ItemProduct({ product }) {
         <img alt="" src={product?.avatar?.url} />
         <h3>{product?.name}</h3>
         <hr />
-        <div className="bar-price">Giá : Liên hệ</div>
+        <div className="bar-price">Giá : {product?.price}</div>
       </div>
     </a>
   );

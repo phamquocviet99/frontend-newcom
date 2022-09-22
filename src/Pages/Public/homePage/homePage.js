@@ -142,13 +142,16 @@ function HomePage(props) {
           </div>
         </div>
       </article>
-      <article>
+     
+      
+  <div>
+  <article>
         <div className="container">
           <div className="row">
             <div
               data-aos="fade-left"
               data-aos-duration="2000"
-              className="col-md-8 "
+              className="col-md-8 col-xs-12"
               style={{ padding: "0px" }}
             >
               <img
@@ -160,19 +163,18 @@ function HomePage(props) {
             <div
               data-aos="fade-right"
               data-aos-duration="2000"
-              className="col-md-4"
+              className="col-md-4 col-xs-12"
             >
               <img
                 className="img-homepage-right"
                 alt=""
-                src="https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2F20200819145640f5ZO2s.jpg?alt=media&token=173fa188-159f-41b1-a3d0-706b1b86d3c1"
+                src={require("../../../Images/homeImage/soidan.jpg")}
               ></img>
             </div>
           </div>
         </div>
       </article>
-      
-<div>
+    <article>
   <div className="container-ma">
     <div className="background-mask-home">
       <div className="row">
@@ -188,6 +190,7 @@ Technology</h3>
       </div>
     </div>
   </div>
+  </article>
 </div>
 
 

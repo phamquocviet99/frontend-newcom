@@ -99,8 +99,8 @@ function ProductPage(props) {
           <div className="col-md-9"  data-aos="fade-left"
                 data-aos-duration="1500">
             <div className="group-product">
-              <Markup content={category?.description} />
-              <div className="row mt-5">
+              {/* <Markup content={category?.description} /> */}
+              <div className="row">
                 {listProduct?.map((product, index) => (
                   <div className="col-md-4 col-sm-6">
                     <ItemProduct product={product} />
