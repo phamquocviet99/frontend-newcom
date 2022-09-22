@@ -4,9 +4,9 @@ export default {
       messages: { 
         nameCompany:'GALAXY SYNTHETIC COMPANY',
       contentHome1:"GALAXY SYNTHETIC CO.,LTD is a leading manufacturer and exporter of wicker furniture in Vietnam. GALAXY provides complete outdoor solutions with high quality products and international designs. You could customize designs to suit your senses and comfort. If you are interested in developing a new design, please contact us and we will help make it real."
-      , contentHome2:"GALAXY uses the latest development in lacquering, Polyethylene UV and Water Resistant materials to make high quality swing chairs, outdoor sofas, chaise lounges and dining furniture. Our rattan/wicker furniture collections are ideally suited for gardens, restaurants, hotels & resorts"
+      , contentHome2:"GALAXY uses the latest development in lacquering, Polyethylene UV and Water Resistant materials to make high quality swing chairs, outdoor sofas, chaise lounges and dining furniture. Our rattan/wicker furniture collections are ideally suited for gardens, restaurants, hotels & resorts."
       ,
-       contentHome3:"You can order with personalized designs for fit and comfort, we will help you turn your great ideas into real products, contact us .",
+       contentHome3:"At GALAXY, we believe knowing our customers helps us serve them better. We listen. We observe. We understand that each customer has unique needs. So, we pride ourselves on helping our customers make smart contract outdoor furniture decisions by offering expert advice, design options and personalized solutions.",
        weHave:"what we achieved",
        have1:"15+ Years experience",
        have2:"40+ Containers 40HC/month",

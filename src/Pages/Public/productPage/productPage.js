@@ -89,9 +89,9 @@ function ProductPage(props) {
               ))}
             </div>
             <div className="contact-product-page">
-              <i>Để biết thêm thông tin vui lòng xin liên hệ :</i>
-              <h4>CÔNG TY TNHH TỔNG HỢP NGÂN HÀ</h4>
-              <p>Địa chỉ : {information?.address} </p>
+              <i>For more information please contact :</i>
+              <h4>GALAXY SYNTHETIC COMPANY</h4>
+              <p>Address : Lot C14, Phu Tai Industrial Zone, Bui Thi Xuan Ward Quy Nhon City, Binh Dinh </p>
               <p>Hotline : {information?.phone}</p>
               <p>Email : {information?.email}</p>
             </div>

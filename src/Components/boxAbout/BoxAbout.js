@@ -14,14 +14,14 @@ function BoxAbout(props) {
         data-aos-duration="2000"
               className="img-box-about-1"
               alt=""
-              src={require("../../Images/box-about-2.webp")}
+              src="https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fistockphoto-1205984990-612x612.jpg?alt=media&token=de204af0-64f4-4e16-97c7-e0faa6347c97"
             ></img>
             <img
             data-aos="fade-up"
             data-aos-duration="2000"
               className="img-box-about-2"
               alt=""
-              src={require("../../Images/box-about-1.jpg")}
+              src="https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Foutsunny-patio-conversation-sets-860-020v01gy-76_600.jpg?alt=media&token=5675b23f-8a99-4f80-b1d3-2c8d56fd28ea"
             ></img>
           </div>
           <img
@@ -29,7 +29,7 @@ function BoxAbout(props) {
           data-aos-duration="2000"
             className="img-box-about-3"
             alt=""
-            src={require("../../Images/box-about3.webp")}
+            src="https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2F6970857fd25b268e99c4d711abff4768.png?alt=media&token=16854591-634e-4143-b2b5-371deccf7cc5"
           ></img>
         </div>
         <div data-aos="fade-left"

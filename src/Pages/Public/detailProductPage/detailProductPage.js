@@ -50,13 +50,12 @@ function DetailProductPage() {
     FetchProduct();
   }, [id]);
   return (
-    <div>
-      <div className="hero-image-product "></div>
-      <Title title={product?.name} />
-
+    <div style={{paddingTop:"130px"}}>
+      
       <div className="container">
+       
         <div className="row">
-          <div className="col-md-9 col-xs-12">
+          <div className="col-md-6 col-xs-12">
             <Carousel autoPlay interval="2000" transitionTime="1000">
               {product?.image?.map((i, index) => (
                 <div key={index}>
@@ -64,27 +63,26 @@ function DetailProductPage() {
                 </div>
               ))}
             </Carousel>
-            <div className="description-product">
-              <Markup content={product?.description}></Markup>
-            </div>
+           
           </div>
-          <div className="col-md-3 col-xs-12">
-            <p>
-              Sản phẩm - {product?.nameCategory}- 
+          <div className="col-md-4 col-xs-12">
+            <h3>
+           
               {product?.name}
-            </p>
+            </h3>
+            <h2 style={{marginBottom:"20px",color:"red"}}>{product?.price}</h2>
             <div className="content-product-detail">
-              <p>
-                <strong>Tên mẫu sản phẩm</strong> : <i>{product?.name}</i>
-              </p>
-              <p>
-                <strong>Tên danh mục</strong> :<i> {product?.nameCategory}</i>
-              </p>
+             
+            
               <p>
                 <strong>Kích thước</strong> : <i>{product?.size}</i>
               </p>
               <p>
-                <strong>Sử dụng </strong> : <i>{product?.uses}</i>
+                <strong>Sử dụng </strong> : <br/><i><Markup content={product?.uses}/></i>
+              </p>
+              <div style={{height:"2px",width:"100%",backgroundColor:"rgb(153, 153, 153)",marginBottom:"10px"}}/>
+              <p>
+                <strong>Danh mục</strong> :<i> {product?.nameCategory}</i>
               </p>
               <a href="/lien-he" className="btn btn-success">
                 <i>Liên hệ để đặt mẫu</i>
@@ -92,6 +90,10 @@ function DetailProductPage() {
             </div>
           </div>
         </div>
+        <div className="line-product"></div>
+        <div className="description-product">
+              <Markup content={product?.description}></Markup>
+            </div>
         <div className="line-product"></div>
         <div className="related-product">
           <h3>

@@ -31,6 +31,7 @@ function HomePage(props) {
   const [widthh, setWidth] = useState(0);
   const [listPartner, setListPartner] = useState([]);
   const [listNews, setListNews] = useState([]);
+
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, [carousel]);
@@ -69,17 +70,17 @@ function HomePage(props) {
   return (
     <div className="content-homepage">
       <Carousel fade>
-        <Carousel.Item interval={7000}>
+        <Carousel.Item interval={4000}>
           <div className="carousel-inner">
             <div className="item active">
               <img src={require("../../../Images/IO.png")} alt="Chania" />
             </div>
           </div>
         </Carousel.Item>
-        <Carousel.Item interval={7000}>
+        <Carousel.Item interval={4000}>
           <div className="carousel-inner ">
             <div className="item active">
-              <img src={require("../../../Images/IO.png")} alt="Chania" />
+              <img src={require("../../../Images/homeImage/Video-Homepagina-Promotie-1280x700-1.jpg")} alt="Chania" />
             </div>
           </div>
         </Carousel.Item>
@@ -134,7 +135,7 @@ function HomePage(props) {
                 <img
                   className="img-about"
                   alt=""
-                  src={require("../../../Images/img-about.webp")}
+                  src={require("../../../Images/homeImage/home1.jpg")}
                 ></img>
               </div>
             </div>
@@ -153,7 +154,7 @@ function HomePage(props) {
               <img
                 className="img-homepage-left"
                 alt=""
-                src={require("../../../Images/img-home-left.webp")}
+                src={require("../../../Images/homeImage/2021_Apple-Bee_Bijou-Dining_Website-2560x1400_001-1280x530-1.jpg")}
               ></img>
             </div>
             <div
@@ -164,165 +165,88 @@ function HomePage(props) {
               <img
                 className="img-homepage-right"
                 alt=""
-                src={require("../../../Images/img-home-right.jpg")}
+                src="https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2F20200819145640f5ZO2s.jpg?alt=media&token=173fa188-159f-41b1-a3d0-706b1b86d3c1"
               ></img>
             </div>
           </div>
         </div>
       </article>
-      <article style={{ backgroundColor: "#F4F4F4" }}>
-        <div className="container">
-          <h3 style={{ color: "#007049" }} className="font-title text-center">
-            {translate('weHave')}
-          </h3>
-          <div className="row">
-            <div className="col-md-3">
-              <div className="circle-icon-home">
-                <BsFillAwardFill className="icon-home" />
-              </div>
-              <div className="box-txt-icon">
-                <h4 style={{ color: "#007049" }}>
-                 {translate('have1')}
-                </h4>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="circle-icon-home">
-                <BsFillBarChartFill className="icon-home" />
-              </div>
-              <div className="box-txt-icon">
-                <h4 style={{ color: "#007049" }}>
-                {translate('have2')}
-                </h4>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="circle-icon-home">
-                <MdPeopleAlt className="icon-home" />
-              </div>
-              <div className="box-txt-icon">
-                <h4 style={{ color: "#007049" }}>
-                {translate('have3')}
-                </h4>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="circle-icon-home">
-                <GiFactory className="icon-home" />
-              </div>
-              <div className="box-txt-icon">
-                <h4 style={{ color: "#007049" }}>
-                {translate('have4')}
-                </h4>
-              </div>
-            </div>
+      
+<div>
+  <div className="container-ma">
+    <div className="background-mask-home">
+      <div className="row">
+        <div className="col-md-6"></div>
+        <div className="col-md-6">
+          <div className="content-mask-home text-center">
+            <h3>GALAXY
+Technology</h3>
+<p>Galaxy furniture is made of the highest quality materials. The same certainly applies to the cushions. Our Galaxy range consists of special weather-resistant cushions that you can simply leave outside. The removable covers are all washable.</p>
+<a className="box-see-more" href="/" >See more</a>
           </div>
         </div>
-      </article>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <article style={{ padding: "0" }}>
+
+      <div style={{ padding: "0" }}>
         <div className="content-cate-home">
           <div className="row">
-            <div className="col-md-6">
-              <div className="box-cate-left">
-                <div
-                  data-aos="fade-right"
-                  data-aos-duration="2000"
-                  className="content-box-cate-left"
-                >
-                  <img
-                    alt=""
-                    src={require("../../../Images/left-cate-img.PNG")}
-                  ></img>
-                  <div className="content-cate-left">
-                    <h4>{translate('setSofa')}</h4>
-                    <p>
-                    {translate('contentSofa')}
-                    </p>
-                  </div>
-                </div>
-                <div
-                  data-aos="fade-right"
-                  data-aos-duration="2000"
-                  className="content-box-cate-left"
-                >
-                  <img
-                    alt=""
-                    src={require("../../../Images/Noi-that-may-tre-dan-2.jpg")}
-                  ></img>
-                  <div className="content-cate-left">
-                    <h4>{translate('setDinner')}</h4>
-                    <p>
-                    {translate('contentDinner')}
-                    </p>
-                  </div>
-                </div>
+            <div className="col-md-4">
+             <div className="who-we text-center">
+              <h3>Who we are</h3>
+              <div>
+                <div className="line-we-who"></div>
               </div>
+        
+              <p>At its outset, Galaxy started as a hardware manufacturer specialist for wooden furniture, but in 2008, the official switch is made to focus on the production of an outdoor & indoor furniture brand. A furniture brand with a unique design was born in the Vietnam then.</p>
+              <a className="box-see-more" href="/" >See more</a>
+             </div>
             </div>
-            <div className="col-md-6">
-              <div className="box-cate-right">
+            <div className="col-md-8">
+              
                 <div className="under-box-cate-right">
                   <img
                     data-aos="fade-left"
                     data-aos-duration="2000"
                     alt=""
-                    src={require("../../../Images/exteta.jpg")}
+                    src={require("../../../Images/pic-about1.jpg")}
                   />
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <div className="factory-home">
-        <div className="container">
-          <div className="factory-home-content">
-            <h3 style={{ color: "#5d9090" }} className="font-title">
-              {translate('factory')}
-            </h3>
-            <div className="row">
-              <div
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <div className="bar-img-factory-1">
-                  <img alt="" src={require("../../../Images/warehouse.jpg")} />
-                  <img
-                    alt=""
-                    src={require("../../../Images/warehouse-1.jpg")}
-                  />
-                </div>
-              </div>
-              <div
-                data-aos="fade-down"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <div className="bar-img-factory-2">
-                  <img alt="" src={require("../../../Images/company.jpg")} />
-                </div>
-              </div>
-              <div
-                data-aos="fade-left"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <div className="bar-img-factory-1">
-                  <img alt="" src={require("../../../Images/fac-1.PNG")} />
-                  <img alt="" src={require("../../../Images/fac-2.PNG")} />
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
       </div>
+      <div className="hi-quality-home ">
+        <div className="mask-content-hi-quality text-center">
+          <div className="content-hi-quality text-center"><h3>The high-quality <br/> materials<br/> 
+          that we use
+          </h3><p>Choosing quality means choosing 
+          the best materials. We think that goes 
+          without saying. That’s why we use high-
+          quality aluminium, firm rope wicker 
+          cord, our recyclable & comfortable
+           cushions. The wood that we use,
+            grows in sustainably managed and controlled plantations, and it is certified.</p>
+            </div>
+
+         
+        </div>
+        
+      </div>
       <article>
         <div className="container">
           <div className="style-home">
-            <h3 style={{ color: "#5d9090" }} className="font-title">
-              {translate('news')}
-            </h3>
+            <div className="content-title-home">
+              <h3> {translate('news')}</h3>
+              <p>Discover the exclusive outdoor & indoor furniture collections of Galaxy</p>
+            </div>
+           
+             
+            
             <div>
               <div className="row">
                 <div
@@ -351,15 +275,16 @@ function HomePage(props) {
       <article style={{ backgroundColor: "#F4F4F4" }}>
         <div className="container">
           <div className="product-home">
-            <h3 style={{ color: "#5d9090" }} className="font-title">
-             {translate('product')}
-            </h3>
+          <div className="content-title-home">
+              <h3> {translate('product')}</h3>
+              <p>View the different categories of our  furniture here.</p>
+            </div>
 
             <div className="row">
               <div
                 data-aos="fade-up"
                 data-aos-duration="2000"
-                className="col-md-3"
+                className="col-md-4"
               >
                 <BoxProduct
                   product={{
@@ -372,7 +297,7 @@ function HomePage(props) {
               <div
                 data-aos="fade-down"
                 data-aos-duration="2000"
-                className="col-md-3"
+                className="col-md-4"
               >
                 <BoxProduct  product={{
                     urlImage:
@@ -383,7 +308,7 @@ function HomePage(props) {
               <div
                 data-aos="fade-up"
                 data-aos-duration="2000"
-                className="col-md-3"
+                className="col-md-4"
               >
                 <BoxProduct  product={{
                     urlImage:
@@ -392,9 +317,31 @@ function HomePage(props) {
                   }} />
               </div>
               <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="col-md-4"
+              >
+                <BoxProduct  product={{
+                    urlImage:
+                      "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fpositano-1024x683.png?alt=media&token=773167eb-c198-4a4e-947e-1fe37e8d77b0",
+                    name: "POSITANO",
+                  }} />
+              </div>
+              <div
                 data-aos="fade-down"
                 data-aos-duration="2000"
-                className="col-md-3"
+                className="col-md-4"
+              >
+                <BoxProduct  product={{
+                    urlImage:
+                      "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2FVideo-Homepagina-Promotie-1280x700-1-1024x560.jpg?alt=media&token=d69fb8d2-93d8-4970-8fa9-e1b58a963593",
+                    name: "PURE LOUNGE",
+                  }} />
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="col-md-4"
               >
                 <BoxProduct  product={{
                     urlImage:
@@ -409,9 +356,11 @@ function HomePage(props) {
       <article>
         <div className="container">
           <div className="product-home">
-            <h3 style={{ color: "#5d9090" }} className="font-title">
-              {translate('reviews')}
-            </h3>
+          
+            <div className="content-title-home">
+              <h3> {translate('reviews')}</h3>
+              <p>Customer reviews help you make the right choice.</p>
+            </div>
           </div>
           <motion.div
             ref={carousel}
@@ -459,15 +408,7 @@ function HomePage(props) {
                   sản phẩm mới từ công ty.
                 </p>
               </motion.div>
-              <motion.div className="box-customer">
-                <img alt="" src={require("../../../Images/avarnam5.jpg")} />
-                <h3>Phan Thanh Hải</h3>
-                <h4>Công nghệ thông tin</h4>
-                <p>
-                  Chăm sóc khách hàng rất nhiệt tình chu đáo, tôi sẽ đặt hàng
-                  công ty trong những lần tiếp theo.
-                </p>
-              </motion.div>
+              
             </motion.div>
           </motion.div>
         </div>

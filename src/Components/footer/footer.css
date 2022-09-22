@@ -43,6 +43,8 @@
 }
 .about-footer {
   margin-top: 30px;
+  display: flex;
+  align-items: center;
 }
 .first-about-footer {
   margin-left: 100px;
@@ -83,7 +85,8 @@
 .bar-bot-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
 }
 .box-social-footer {
   background-color: #929292cb;
@@ -91,7 +94,6 @@
   margin: 15px 0;
   display: flex;
   width: 168px;
-  margin-left: 100px;
 }
 .box-cicle-facebook {
   width: 40px;
@@ -114,8 +116,18 @@
   background-size: cover;
   margin: 8px;
 }
-.line-footer {
-  display: none;
+.goo-map{
+  margin-bottom: 10px;
+}
+.goo-map>h3{
+  color: white;
+  font-size: 20px;
+}
+.line-map{
+  background-color: white;
+  height: 5px;
+  width: 30%;
+  margin-bottom: 15px;
 }
 @media only screen and (max-width: 1024px) {
   .line-v-footer {
@@ -150,11 +162,10 @@
   .about-footer {
     margin-top: 10px;
   }
-  .first-about-footer {
-    margin-left: 20px;
-  }
+
   .second-about-footer {
     margin-left: 20px;
+
   }
   .bar-about-footer {
     display: flex;

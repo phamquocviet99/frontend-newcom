@@ -12,7 +12,7 @@ let lang = localStorage.getItem('lang');
 
 let reducers = combineReducers(Object.assign({}, { Intl }))
 
-let store = createStore(reducers, { Intl: { locale: "vn"}})
+let store = createStore(reducers, { Intl: { locale: "en"}})
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

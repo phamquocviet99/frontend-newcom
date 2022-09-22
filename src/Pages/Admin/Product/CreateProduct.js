@@ -15,6 +15,7 @@ function CreateProduct() {
     name: "",
     size: "",
     uses: "",
+    price: "",
     description: "",
     idCategory: "",
     avatar: { url: "", name: "" },
@@ -100,6 +101,7 @@ function CreateProduct() {
     if (
       product.name === "" ||
       product.idCategory === "" ||
+      product.price === "" ||
       selectAvatar === null ||
       listSelectImage.length === 0
     ) {
@@ -174,14 +176,15 @@ function CreateProduct() {
               />
             </div>
             <div className=" form-group">
-              <label>Công dụng</label>
+              <label>Giá</label>
               <input
                 onChange={(e) => {
-                  setProduct({ ...product, uses: e.target.value });
+                  setProduct({ ...product, price: e.target.value });
                 }}
                 className="form-control"
               />
             </div>
+         
             <div className=" form-group">
               <label>Các hình ảnh về cây (chọn được nhiều ảnh)</label>
 
@@ -189,6 +192,7 @@ function CreateProduct() {
                 <input onChange={handleChangeImage} multiple type="file" />
               </div>
             </div>
+            
           </div>
           <div className="col-md-6">
             <div className="form-group">
@@ -223,6 +227,20 @@ function CreateProduct() {
                   <></>
                 )}
               </div>
+            </div>
+            <div className=" form-group">
+              <label>Công dụng</label>
+              <JoditEditor
+                 onChange={(e) => {
+                  setProduct({ ...product, uses: e.target.value });
+                }}
+                onBlur={(newContent) => {
+                  setProduct({ ...product, uses: newContent });
+                }}
+                className="form-control"
+                
+              />
+             
             </div>
           </div>
         </div>

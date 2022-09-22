@@ -42,8 +42,8 @@
   }
 } */
 .box-product > img {
-  height: 250px;
-  width: 270px;
+  height: 300px;
+  width: 100%;
   object-fit: cover;
   transition: transform 0.5s;
 }

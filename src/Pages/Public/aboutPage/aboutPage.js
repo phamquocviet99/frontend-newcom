@@ -11,6 +11,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useParams } from "react-router-dom";
 import { withTranslate } from 'react-redux-multilingual'
+import { BsFillAwardFill, BsFillBarChartFill } from "react-icons/bs";
+import { MdPeopleAlt } from "react-icons/md";
+import { GiFactory } from "react-icons/gi";
 
 function AboutPage(props) {
   const { translate } = props;
@@ -49,7 +52,98 @@ function AboutPage(props) {
          {translate('whoWeAre')}
         </p>
       </div>
-
+      <article style={{ backgroundColor: "#F4F4F4" }}>
+        <div className="container">
+          <h3 style={{ color: "#007049" }} className="font-title text-center">
+            {translate('weHave')}
+          </h3>
+          <div className="row">
+            <div className="col-md-3">
+              <div className="circle-icon-home">
+                <BsFillAwardFill className="icon-home" />
+              </div>
+              <div className="box-txt-icon">
+                <h4 style={{ color: "#007049" }}>
+                 {translate('have1')}
+                </h4>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="circle-icon-home">
+                <BsFillBarChartFill className="icon-home" />
+              </div>
+              <div className="box-txt-icon">
+                <h4 style={{ color: "#007049" }}>
+                {translate('have2')}
+                </h4>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="circle-icon-home">
+                <MdPeopleAlt className="icon-home" />
+              </div>
+              <div className="box-txt-icon">
+                <h4 style={{ color: "#007049" }}>
+                {translate('have3')}
+                </h4>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="circle-icon-home">
+                <GiFactory className="icon-home" />
+              </div>
+              <div className="box-txt-icon">
+                <h4 style={{ color: "#007049" }}>
+                {translate('have4')}
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div className="factory-home">
+        <div className="container">
+          <div className="factory-home-content">
+            <h3 style={{ color: "#5d9090" }} className="font-title">
+              {translate('factory')}
+            </h3>
+            <div className="row">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="2000"
+                className="col-md-4"
+              >
+                <div className="bar-img-factory-1">
+                  <img alt="" src={require("../../../Images/warehouse.jpg")} />
+                  <img
+                    alt=""
+                    src={require("../../../Images/warehouse-1.jpg")}
+                  />
+                </div>
+              </div>
+              <div
+                data-aos="fade-down"
+                data-aos-duration="2000"
+                className="col-md-4"
+              >
+                <div className="bar-img-factory-2">
+                  <img alt="" src={require("../../../Images/company.jpg")} />
+                </div>
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="2000"
+                className="col-md-4"
+              >
+                <div className="bar-img-factory-1">
+                  <img alt="" src={require("../../../Images/fac-1.PNG")} />
+                  <img alt="" src={require("../../../Images/fac-2.PNG")} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <ProcessDev />
       <div className="container">
         <div className="row">
