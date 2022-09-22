@@ -58,5 +58,7 @@
   background-color: rgb(124, 124, 124);
 }
 @media only screen and (max-width: 1024px) {
-
+  .limit-txt-content{
+    display: none;
+  }
 }
