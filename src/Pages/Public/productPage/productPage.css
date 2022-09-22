@@ -5,22 +5,41 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .box-category-product {
   width: 100%;
   border-radius: 8px;
   background-color: white;
   border: 3px solid #007049;
 }
+
 .contact-product-page {
   margin-top: 20px;
 }
-.contact-product-page > h4 {
+
+.contact-product-page>h4 {
   font-size: 15px;
   font-weight: bold;
   color: #c35555;
 }
-.contact-product-page > p {
-font-style: italic;
+
+.contact-product-page>p {
+  font-style: italic;
   margin: 0;
   color: #c35555;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact-product-page {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .hero-image-product {
+    background-image: url("../../../Images/Group\ 49.png");
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

@@ -49,7 +49,7 @@ function StylePage(props) {
       <div className="hero-image-style"></div>
       <Title title={translate('news')} />
       <div className="container">
-        <div className="row ">
+       
           {loading ? (
             <div
               className="text-center"
@@ -65,9 +65,9 @@ function StylePage(props) {
               Đang tải tin tức...
             </div>
           ) : (
-            <div>
+            <div className="row">
               {listNews?.map((n, index) => (
-                <div key={index} className="col-md-4 col-sm-6">
+                <div key={index} className="col-md-4 col-sm-6 col-xs-12">
                   <BoxStyle news={n} />
                 </div>
               ))}
@@ -100,7 +100,7 @@ function StylePage(props) {
           )}
         </div>
       </div>
-    </div>
+  
   );
 }
 

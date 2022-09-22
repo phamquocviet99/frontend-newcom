@@ -1,17 +1,32 @@
-.hero-image-about{
+.hero-image-about {
     background-image: url("../../../Images/hero-about.png");
-   height: 80vh;
-   background-repeat: no-repeat;
-   background-size: cover;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-}
-.img-pic-about-1{
+.img-pic-about-1 {
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
-.img-pic-about-2{
+
+.img-pic-about-2 {
     width: 100%;
     height: 300px;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero-image-about {
+        
+        background-image: url("../../../Images/hero-about.png");
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .canh-deu{
+        margin: 20px 0;
+        text-align: justify;
+    }
 }

@@ -9,6 +9,11 @@
   color: #ca7f3c;
   margin-right: 30px;
 }
+.icon-contact-1 {
+  font-size: 70px;
+  color: #ca7f3c;
+  margin-right: 30px;
+}
 .bar-contact {
   display: flex;
   align-items: center;
@@ -31,4 +36,17 @@
 }
 .group-input-1 {
   display: flex;
+}
+@media only screen and (max-width: 1024px) {
+  .hero-image-contact {
+    background-image: url("../../../Images/contact-us.png");
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon-contact-1 {
+    font-size: 100px;
+    color: #ca7f3c;
+    margin-right: 30px;
+  }
 }

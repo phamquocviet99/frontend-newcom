@@ -1,34 +1,40 @@
 .title-about {
   margin-bottom: 30px;
 }
-.title-about > h3 {
+
+.title-about>h3 {
   color: #007049;
   font-size: 24px;
 }
+
 .bar-process {
   margin-bottom: 30px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+
 .sub-bar-process-1 {
   width: 48%;
   height: 90px;
   display: flex;
   align-items: center;
 }
-.sub-bar-process-1 > h3 {
+
+.sub-bar-process-1>h3 {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 20px;
   color: #ffff;
 }
+
 .group-sub-bar-process-2 {
   display: flex;
   height: 90px;
   width: 53%;
 }
+
 .sub-bar-process-2 {
   margin-left: 20px;
   width: 50%;
@@ -36,20 +42,23 @@
   display: flex;
   align-items: center;
 }
-.sub-bar-process-2 > h3 {
+
+.sub-bar-process-2>h3 {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 20px;
   color: #ffff;
 }
-.sub-bar-process-3 > h3 {
+
+.sub-bar-process-3>h3 {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 20px;
   color: #ffff;
 }
+
 .sub-bar-process-3 {
   margin-left: 20px;
   width: 50%;
@@ -57,25 +66,30 @@
   display: flex;
   align-items: center;
 }
+
 .fix {
   margin-left: 0px;
   margin-right: 20px;
 }
+
 .content-bar {
   margin-left: 30px;
   vertical-align: baseline;
 }
+
 .content-sub-bar {
   display: flex;
   align-items: center;
 }
-.content-sub-bar > div {
+
+.content-sub-bar>div {
   width: 13px;
   height: 13px;
   border-radius: 50%;
   background-color: #d9d9d9;
 }
-.content-sub-bar > p {
+
+.content-sub-bar>p {
   margin: 0;
   padding: 0;
   color: #ffff;
@@ -88,10 +102,12 @@
     display: block;
     justify-content: space-between;
   }
+
   .sub-bar-process-1 {
     width: 100%;
     height: 90px;
   }
+
   .group-sub-bar-process-2 {
     margin-top: 30px;
     display: flex;
@@ -99,21 +115,51 @@
     width: 100%;
     justify-content: space-between;
   }
+
   .sub-bar-process-2 {
     margin-left: 0px;
     width: 48%;
     height: 90px;
   }
+
   .sub-bar-process-3 {
     margin-left: 0px;
     width: 48%;
     height: 90px;
   }
+
   .fix {
     margin-left: 0px;
     margin-right: 0px;
   }
+
   .fix-width {
     margin-bottom: 30px;
+  }
+
+  .sub-bar-process-3>h3 {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: #ffff;
+  }
+
+  .content-sub-bar>p {
+    margin: 0;
+    padding: 0;
+    color: #ffff;
+    margin-left: 15px;
+    font-size: 12px;
+  }
+
+  .content-sub-bar>div {
+    display: none;
+  }
+  .content-sub-bar>p {
+    margin: 0;
+    padding: 0;
+    color: #ffff;
+    margin-left: 0px;
   }
 }

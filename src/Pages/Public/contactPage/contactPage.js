@@ -60,7 +60,7 @@ function ContactPage(props) {
             </div>
             <div className="group-bar-contact">
               <div className="bar-contact">
-                <AiOutlineHome className="icon-contact" />
+                <AiOutlineHome className="icon-contact-1" />
                 <p>
                   <strong>{translate('address')} : </strong>
                   <span>

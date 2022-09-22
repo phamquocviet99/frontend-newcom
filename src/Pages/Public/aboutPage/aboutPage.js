@@ -48,7 +48,7 @@ function AboutPage(props) {
       <div className="hero-image-about"></div>
       <BoxAbout />
       <div className="container">
-        <p>
+        <p className="canh-deu">
          {translate('whoWeAre')}
         </p>
       </div>

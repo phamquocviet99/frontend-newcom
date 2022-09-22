@@ -4,6 +4,7 @@ import "./boxStyle.css";
 
 function BoxStyle({ news }) {
   return (
+    
     <div className="box-style">
       <img alt="" src={news?.urlImage} />
 

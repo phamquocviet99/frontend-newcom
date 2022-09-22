@@ -22,3 +22,12 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  @media only screen and (max-width: 1024px) {
+    .hero-image-recruit {
+      background-image: url("../../../Images/recruit-hero-image.jpg");
+      height: 40vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }

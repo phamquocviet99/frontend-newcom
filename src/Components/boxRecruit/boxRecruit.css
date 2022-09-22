@@ -24,3 +24,22 @@
   margin: 20px;
   text-align: justify;
 }
+@media only screen and (max-width: 1024px) {
+  .box-recruit {
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: 0px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(175, 175, 175);
+  }
+  .box-recruit:hover {
+    width: 100%;
+    margin-left: 0px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 5px 5px 5px rgb(175, 175, 175);
+  }
+}

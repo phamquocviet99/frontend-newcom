@@ -23,3 +23,12 @@
   width: 100%;
   background-color: rgb(153, 153, 153);
 }
+@media only screen and (max-width: 1024px) {
+  .carousel .slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    vertical-align: top;
+    border: 0;
+  }
+}

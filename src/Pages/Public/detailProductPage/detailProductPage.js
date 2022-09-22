@@ -101,7 +101,7 @@ function DetailProductPage() {
           </h3>
           <div className="row">
             {listProduct?.map((product, index) => (
-              <div key={index} className="col-md-3 col-xs-6">
+              <div key={index} className="col-md-3 col-xs-12">
                 <ItemProduct product={product}></ItemProduct>
               </div>
             ))}
