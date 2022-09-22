@@ -12,7 +12,7 @@ function BoxStyle({ news }) {
       <div className="line-news mb-2"></div>
       <p>Posted on : {news?.createdAt?.slice(0, 10)} </p>
       <h5>
-        <Markup className="limit-txt-content" content={news?.content}></Markup>
+        <Markup className="limit-txt-name" content={news?.content}></Markup>
       </h5>
       <div href={`/chi-tiet-bai-viet/${news._id}`} className="box-a-style">
         <a href={`/chi-tiet-bai-viet/${news._id}`}>See more</a>
