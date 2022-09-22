@@ -30,6 +30,13 @@
 }
 .content-style-home > h3 {
   font-size: 18px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .content-style-home > p {
   font-size: 15px;
@@ -62,4 +69,13 @@
   font-weight: bold;
   margin: 0;
   padding: 0;
+}
+.limit-txt-name-style {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }

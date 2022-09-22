@@ -90,7 +90,7 @@ function HomePage(props) {
           <div className="row">
             <div className="col-md-8">
               <div className="name-company-homepage">
-               
+
                 <h2>{translate('nameCompany')}</h2>
                 <h3>Outdoor & Indoor Furniture</h3>
                 <div></div>
@@ -112,7 +112,7 @@ function HomePage(props) {
               >
                 <i />
                 <p>
-                 {translate("contentHome2")}
+                  {translate("contentHome2")}
                 </p>
               </div>
               <div
@@ -122,7 +122,7 @@ function HomePage(props) {
               >
                 <i />
                 <p>
-                {translate("contentHome3")}
+                  {translate("contentHome3")}
                 </p>
               </div>
             </div>
@@ -142,103 +142,103 @@ function HomePage(props) {
           </div>
         </div>
       </article>
-     
-      
-  <div>
-  <article>
-        <div className="container">
-          <div className="row">
-            <div
-              data-aos="fade-left"
-              data-aos-duration="2000"
-              className="col-md-8 col-xs-12"
-              style={{ padding: "0px" }}
-            >
-              <img
-                className="img-homepage-left"
-                alt=""
-                src={require("../../../Images/homeImage/2021_Apple-Bee_Bijou-Dining_Website-2560x1400_001-1280x530-1.jpg")}
-              ></img>
-            </div>
-            <div
-              data-aos="fade-right"
-              data-aos-duration="2000"
-              className="col-md-4 col-xs-12"
-            >
-              <img
-                className="img-homepage-right"
-                alt=""
-                src={require("../../../Images/homeImage/soidan.jpg")}
-              ></img>
+      <div>
+        <article>
+          <div className="container">
+            <div className="row">
+              <div
+
+                className="col-md-8 col-xs-12"
+                style={{ padding: "0px" }}
+              >
+                <img
+                  className="img-homepage-left"
+                  alt=""
+                  src={require("../../../Images/homeImage/2021_Apple-Bee_Bijou-Dining_Website-2560x1400_001-1280x530-1.jpg")}
+                ></img>
+              </div>
+              <div
+
+                className="col-md-4 col-xs-12"
+              >
+                <img
+                  className="img-homepage-right"
+                  alt=""
+                  src={require("../../../Images/homeImage/soidan.jpg")}
+                ></img>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
-    <article>
-  <div className="container-ma">
-    <div className="background-mask-home">
-      <div className="row">
-        <div className="col-md-6"></div>
-        <div className="col-md-6">
-          <div className="content-mask-home text-center">
-            <h3>GALAXY
-Technology</h3>
-<p>Galaxy furniture is made of the highest quality materials. The same certainly applies to the cushions. Our Galaxy range consists of special weather-resistant cushions that you can simply leave outside. The removable covers are all washable.</p>
-<a className="box-see-more" href="/" >See more</a>
+        </article>
+        <article>
+          <div className="container-ma">
+            <div className="background-mask-home">
+              <div className="row">
+                <div className="col-md-6"></div>
+                <div className="col-md-6">
+                  <div className="content-mask-home text-center">
+                    <h3>GALAXY
+                      Technology
+                    </h3>
+                    <p>Galaxy furniture
+                      is made of the highest
+                      quality materials.
+                      The same certainly applies to the cushions. Our Galaxy range consists of special weather-resistant cushions that you can simply leave outside. The removable covers are all washable.</p>
+                    <a className="box-see-more" href="/" >See more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
-  </div>
-  </article>
-</div>
 
 
       <div style={{ padding: "0" }}>
         <div className="content-cate-home">
           <div className="row">
             <div className="col-md-4">
-             <div className="who-we text-center">
-              <h3>Who we are</h3>
-              <div>
-                <div className="line-we-who"></div>
+              <div className="who-we text-center">
+                <h3>Who we are</h3>
+                <div>
+                  <div className="line-we-who"></div>
+                </div>
+
+                <p>At its outset, Galaxy started as a hardware manufacturer specialist for wooden furniture, but in 2008, the official switch is made to focus on the production of an outdoor & indoor furniture brand. A furniture brand with a unique design was born in the Vietnam then.</p>
+                <a className="box-see-more" href="/" >See more</a>
               </div>
-        
-              <p>At its outset, Galaxy started as a hardware manufacturer specialist for wooden furniture, but in 2008, the official switch is made to focus on the production of an outdoor & indoor furniture brand. A furniture brand with a unique design was born in the Vietnam then.</p>
-              <a className="box-see-more" href="/" >See more</a>
-             </div>
             </div>
             <div className="col-md-8">
-              
-                <div className="under-box-cate-right">
-                  <img
-                    data-aos="fade-left"
-                    data-aos-duration="2000"
-                    alt=""
-                    src={require("../../../Images/pic-about1.jpg")}
-                  />
-                </div>
-             
+
+              <div className="under-box-cate-right">
+                <img
+                  data-aos="fade-left"
+                  data-aos-duration="2000"
+                  alt=""
+                  src={require("../../../Images/pic-about1.jpg")}
+                />
+              </div>
+
             </div>
           </div>
         </div>
       </div>
       <div className="hi-quality-home ">
         <div className="mask-content-hi-quality text-center">
-          <div className="content-hi-quality text-center"><h3>The high-quality <br/> materials<br/> 
-          that we use
-          </h3><p>Choosing quality means choosing 
-          the best materials. We think that goes 
-          without saying. That’s why we use high-
-          quality aluminium, firm rope wicker 
-          cord, our recyclable & comfortable
-           cushions. The wood that we use,
+          <div className="content-hi-quality text-center"><h3>The high-quality <br /> materials<br />
+            that we use
+          </h3><p>Choosing quality means choosing
+            the best materials. We think that goes
+            without saying. That’s why we use high-
+            quality aluminium, firm rope wicker
+            cord, our recyclable & comfortable
+            cushions. The wood that we use,
             grows in sustainably managed and controlled plantations, and it is certified.</p>
-            </div>
+          </div>
 
-         
+
         </div>
-        
+
       </div>
       <article>
         <div className="container">
@@ -247,9 +247,9 @@ Technology</h3>
               <h3> {translate('news')}</h3>
               <p>Discover the exclusive outdoor & indoor furniture collections of Galaxy</p>
             </div>
-           
-             
-            
+
+
+
             <div>
               <div className="row">
                 <div
@@ -278,7 +278,7 @@ Technology</h3>
       <article style={{ backgroundColor: "#F4F4F4" }}>
         <div className="container">
           <div className="product-home">
-          <div className="content-title-home">
+            <div className="content-title-home">
               <h3> {translate('product')}</h3>
               <p>View the different categories of our  furniture here.</p>
             </div>
@@ -302,55 +302,55 @@ Technology</h3>
                 data-aos-duration="2000"
                 className="col-md-4"
               >
-                <BoxProduct  product={{
-                    urlImage:
-                      "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct2.jpg?alt=media&token=12f97510-3bad-4add-8b5f-110dba226ab4",
-                    name: "BIJOU DINING",
-                  }} />
+                <BoxProduct product={{
+                  urlImage:
+                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct2.jpg?alt=media&token=12f97510-3bad-4add-8b5f-110dba226ab4",
+                  name: "BIJOU DINING",
+                }} />
               </div>
               <div
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 className="col-md-4"
               >
-                <BoxProduct  product={{
-                    urlImage:
-                      "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct3.jpg?alt=media&token=aa3306a7-96b0-412b-bddb-ecc9a83eeaa6",
-                    name: "CONDOR DINNING",
-                  }} />
+                <BoxProduct product={{
+                  urlImage:
+                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct3.jpg?alt=media&token=aa3306a7-96b0-412b-bddb-ecc9a83eeaa6",
+                  name: "CONDOR DINNING",
+                }} />
               </div>
               <div
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 className="col-md-4"
               >
-                <BoxProduct  product={{
-                    urlImage:
-                      "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fpositano-1024x683.png?alt=media&token=773167eb-c198-4a4e-947e-1fe37e8d77b0",
-                    name: "POSITANO",
-                  }} />
+                <BoxProduct product={{
+                  urlImage:
+                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fpositano-1024x683.png?alt=media&token=773167eb-c198-4a4e-947e-1fe37e8d77b0",
+                  name: "POSITANO",
+                }} />
               </div>
               <div
                 data-aos="fade-down"
                 data-aos-duration="2000"
                 className="col-md-4"
               >
-                <BoxProduct  product={{
-                    urlImage:
-                      "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2FVideo-Homepagina-Promotie-1280x700-1-1024x560.jpg?alt=media&token=d69fb8d2-93d8-4970-8fa9-e1b58a963593",
-                    name: "PURE LOUNGE",
-                  }} />
+                <BoxProduct product={{
+                  urlImage:
+                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2FVideo-Homepagina-Promotie-1280x700-1-1024x560.jpg?alt=media&token=d69fb8d2-93d8-4970-8fa9-e1b58a963593",
+                  name: "PURE LOUNGE",
+                }} />
               </div>
               <div
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 className="col-md-4"
               >
-                <BoxProduct  product={{
-                    urlImage:
-                      "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct4.jpg?alt=media&token=b29fd705-9d0c-4692-af39-317aa81ed80a",
-                    name: "PATIO BALCONY L SHAPE",
-                  }} />
+                <BoxProduct product={{
+                  urlImage:
+                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct4.jpg?alt=media&token=b29fd705-9d0c-4692-af39-317aa81ed80a",
+                  name: "PATIO BALCONY L SHAPE",
+                }} />
               </div>
             </div>
           </div>
@@ -359,7 +359,7 @@ Technology</h3>
       <article>
         <div className="container">
           <div className="product-home">
-          
+
             <div className="content-title-home">
               <h3> {translate('reviews')}</h3>
               <p>Customer reviews help you make the right choice.</p>
@@ -411,12 +411,12 @@ Technology</h3>
                   sản phẩm mới từ công ty.
                 </p>
               </motion.div>
-              
+
             </motion.div>
           </motion.div>
         </div>
       </article>
-      
+
     </div>
   );
 }
