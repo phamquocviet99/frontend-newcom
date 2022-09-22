@@ -21,6 +21,7 @@ function UpdateProduct() {
     name: "",
     size: "",
     uses: "",
+    price:"",
     description: "",
     idCategory: "",
     avatar: { url: "", name: "" },
@@ -47,6 +48,7 @@ function UpdateProduct() {
         const data = JSON.parse(JSON.stringify(response));
         if (!data.error) {
           setProduct(data.data);
+          console.log(data.data.uses)
         }
       } catch (error) {
         console.log(error);
@@ -77,7 +79,7 @@ function UpdateProduct() {
         const uploadTask = uploadBytesResumable(storageRef, file);
         uploadTask.on(
           "state_changed",
-          (snapshot) => {},
+          (snapshot) => { },
           (error) => {
             alert(error);
           },
@@ -117,7 +119,7 @@ function UpdateProduct() {
       const uploadTask = uploadBytesResumable(storageRef, file);
       uploadTask.on(
         "state_changed",
-        (snapshot) => {},
+        (snapshot) => { },
         (error) => {
           alert(error);
         },
@@ -239,7 +241,7 @@ function UpdateProduct() {
             <div className="form-group ">
               <label>Tên mẫu sản phẩm</label>
               <input
-              value={product?.name}
+                value={product?.name}
                 onChange={(e) => {
                   setProduct({ ...product, name: e.target.value });
                 }}
@@ -267,7 +269,7 @@ function UpdateProduct() {
             <div className=" form-group">
               <label>Kích thước</label>
               <input
-              value={product?.size}
+                value={product?.size}
                 onChange={(e) => {
                   setProduct({ ...product, size: e.target.value });
                 }}
@@ -275,15 +277,16 @@ function UpdateProduct() {
               />
             </div>
             <div className=" form-group">
-              <label>Công dụng</label>
+              <label>Giá</label>
               <input
-              value={product?.uses}
+              value={product?.price}
                 onChange={(e) => {
-                  setProduct({ ...product, uses: e.target.value });
+                  setProduct({ ...product, price: e.target.value });
                 }}
                 className="form-control"
               />
             </div>
+
             <div className=" form-group">
               <label>Các hình ảnh về cây (chọn được nhiều ảnh)</label>
 
@@ -300,9 +303,24 @@ function UpdateProduct() {
                 <input onChange={handleChangeAvatar} type="file" />
               </div>
             </div>
+            <div className=" form-group">
+              <label>Công dụng</label>
+              <JoditEditor
+                onChange={(newContent) => {
+                  setProduct({ ...product, uses: newContent });
+                }}
+                onBlur={(newContent) => {
+                  setProduct({ ...product, uses: newContent });
+                }}
+                className="form-control"
+                tabIndex={1}
+                value={product?.uses}
+              />
+
+            </div>
             <div className="form-group">
               <div className="img-check">
-              <img
+                <img
                   className="img-update"
                   alt=""
                   src={product.avatar?.url}
