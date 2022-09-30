@@ -4,7 +4,7 @@ import "./boxStyle.css";
 
 function BoxStyle({ news }) {
   return (
-    
+
     <div className="box-style">
       <img alt="" src={news?.urlImage} />
 
@@ -12,8 +12,8 @@ function BoxStyle({ news }) {
       <div className="line-news mb-2"></div>
       <p>Posted on : {news?.createdAt?.slice(0, 10)} </p>
       <h5>
-      <div className="limit-txt-content " contentEditable='true' dangerouslySetInnerHTML={{ __html: news?.content }}></div>
-      
+        <div className="limit-txt-content " contentEditable='true' dangerouslySetInnerHTML={{ __html: news?.content }}></div>
+
       </h5>
       <div href={`/chi-tiet-bai-viet/${news._id}`} className="box-a-style">
         <a href={`/chi-tiet-bai-viet/${news._id}`}>See more</a>

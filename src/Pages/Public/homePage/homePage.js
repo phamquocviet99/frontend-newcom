@@ -16,6 +16,7 @@ import { useState, useRef, useEffect } from "react";
 import PartnerApi from "../../../Apis/PartnerApi";
 import { useParams } from "react-router-dom";
 import NewsApi from "../../../Apis/NewsApi";
+import CategoryProductApi from "../../../Apis/CategoryProductApi";
 
 
 
@@ -31,10 +32,26 @@ function HomePage(props) {
   const [widthh, setWidth] = useState(0);
   const [listPartner, setListPartner] = useState([]);
   const [listNews, setListNews] = useState([]);
+  const [listCategory, setListCategory] = useState([]);
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, [carousel]);
+  useEffect(() => {
+    const FetchListCategory = async () => {
+      try {
+        const response = await CategoryProductApi.getAll();
+        const data = JSON.parse(JSON.stringify(response));
+        if (!data.error) {
+          setListCategory(data.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    FetchListCategory();
+  }, []);
   useEffect(() => {
     const FetchFullPartner = async () => {
       try {
@@ -284,74 +301,23 @@ function HomePage(props) {
             </div>
 
             <div className="row">
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <BoxProduct
-                  product={{
-                    urlImage:
-                      "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct1.jpg?alt=media&token=f67f5a27-f237-4714-a3d4-9570f4203a29",
-                    name: "7-PIECE PATIO DINING SET",
-                  }}
-                />
-              </div>
-              <div
-                data-aos="fade-down"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <BoxProduct product={{
-                  urlImage:
-                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct2.jpg?alt=media&token=12f97510-3bad-4add-8b5f-110dba226ab4",
-                  name: "BIJOU DINING",
-                }} />
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <BoxProduct product={{
-                  urlImage:
-                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct3.jpg?alt=media&token=aa3306a7-96b0-412b-bddb-ecc9a83eeaa6",
-                  name: "CONDOR DINNING",
-                }} />
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <BoxProduct product={{
-                  urlImage:
-                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fpositano-1024x683.png?alt=media&token=773167eb-c198-4a4e-947e-1fe37e8d77b0",
-                  name: "POSITANO",
-                }} />
-              </div>
-              <div
-                data-aos="fade-down"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <BoxProduct product={{
-                  urlImage:
-                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2FVideo-Homepagina-Promotie-1280x700-1-1024x560.jpg?alt=media&token=d69fb8d2-93d8-4970-8fa9-e1b58a963593",
-                  name: "PURE LOUNGE",
-                }} />
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="col-md-4"
-              >
-                <BoxProduct product={{
-                  urlImage:
-                    "https://firebasestorage.googleapis.com/v0/b/galaxy-synthetic-company.appspot.com/o/images%2Fimage%2Fproduct4.jpg?alt=media&token=b29fd705-9d0c-4692-af39-317aa81ed80a",
-                  name: "PATIO BALCONY L SHAPE",
-                }} />
-              </div>
+              {listCategory?.map((c, index) => (
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                  className="col-md-4"
+                >
+                  <BoxProduct
+                    product={{
+                      urlImage:
+                        c?.avatar?.url,
+                      name: c?.name,
+                    }}
+                  />
+                </div>
+              ))}
+
+
             </div>
           </div>
         </div>

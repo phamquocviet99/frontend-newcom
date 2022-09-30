@@ -43,9 +43,15 @@ function CategoryProject() {
       const response = await ProductApi.getByIdCate(id);
       const data = JSON.parse(JSON.stringify(response));
       if (!data.error) {
-        for (const pro of data.data) {
-          handleDeleteImageProduct(pro);
+        if (data.data.length > 0) {
+          for (const pro of data.data) {
+            handleDeleteImageProduct(pro);
+          }
         }
+        else {
+          handleDeleteCategory(id)
+        }
+
       }
     } catch (e) {
       alert("Không tìm thấy");
@@ -80,6 +86,19 @@ function CategoryProject() {
         console.log("not");
       });
   }
+  function handleDeleteAvatarCategory(category) {
+    const desertRef = ref(
+      storage,
+      `images/categories/avatar/${category.avatar.name}`
+    );
+    deleteObject(desertRef)
+      .then(() => {
+        deleteProductByIdCategory(category._id)
+      })
+      .catch((error) => {
+        console.log("not");
+      });
+  }
 
   return (
     <div className="container-table">
@@ -95,7 +114,7 @@ function CategoryProject() {
             <tr>
               <th style={{ width: "100px" }}>STT</th>
               <th>Tên danh mục</th>
-              <th>Mô tả</th>
+              <th style={{ width: "200px" }}>Ảnh đại diện</th>
               <th style={{ width: "150px" }}>Hành động</th>
             </tr>
           </thead>
@@ -105,7 +124,11 @@ function CategoryProject() {
                 <td>{index}</td>
                 <td>{c?.name}</td>
                 <td>
-                  <Markup content={c?.description} />
+                  <img
+                    className="img-news-admin"
+                    alt=""
+                    src={c?.avatar.url}
+                  ></img>
                 </td>
                 <td>
                   <a
@@ -115,7 +138,7 @@ function CategoryProject() {
                     <i className="icon-action fa fa-edit"></i>
                   </a>
                   <button
-                    onClick={() => deleteProductByIdCategory(c?._id)}
+                    onClick={() => handleDeleteAvatarCategory(c)}
                     className="btn-action btn btn-danger"
                   >
                     <i className="icon-action fa fa-remove"></i>

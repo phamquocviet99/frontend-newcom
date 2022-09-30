@@ -2,36 +2,62 @@ import { React, useState } from "react";
 import JoditEditor from "jodit-react";
 import CategoryProductApi from "../../../Apis/CategoryProductApi";
 import { useNavigate } from "react-router-dom";
+import useFirebase from "../../../Apis/firebaseCD";
+import { useEffect } from "react";
 
 function CreateCategoryProduct() {
   const navigate = useNavigate();
+  const [selectAvatar, setSelectAvatar] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [category, setCategory] = useState({
     name: "",
-    description: "",
+    avatar: { url: "", name: "" },
   });
-  async function CreateCategory() {
-    try {
-      const response = await CategoryProductApi.create(category);
-      const data = JSON.parse(JSON.stringify(response));
-      if (!data.error) {
-        alert("Thêm danh mục thành công");
-        return true;
+  useEffect(() => {
+    async function CreateCategory() {
+      try {
+        const response = await CategoryProductApi.create(category);
+        const data = JSON.parse(JSON.stringify(response));
+        if (!data.error) {
+          alert("Thêm danh mục thành công");
+          navigate(-1)
+        }
+      } catch (error) {
+        alert("Thêm danh mục  thất bại");
+        console.log(error);
+       
       }
-    } catch (error) {
-      alert("Thêm danh mục  thất bại");
-      console.log(error);
-      return false;
     }
-  }
+    if (category.avatar.url !== "") {
+      CreateCategory()
+    }
+  }, [category.avatar])
+
   //  handle Submit
-  function submitCategory() {
-    if (category.name === "" || category.description === "") {
+  async function submitCategory() {
+    if (category.name === "" || selectAvatar === null) {
       alert("Mời bạn nhập đủ trường thông tin !");
     } else {
-      if (CreateCategory()) {
-        navigate(-1);
+      const avatar = await useFirebase.uploadSingleImage(
+        selectAvatar,
+        "categories/avatar"
+      );
+      if (avatar) {
+        setCategory({ ...category, avatar: avatar })
       }
+
     }
+  }
+  //   Handle Change Avatar
+  function handleChangeAvatar(e) {
+    const file = e.target.files[0];
+    if (file.type === "image/png" || file.type === "image/jpeg") {
+      setSelectAvatar(file);
+    } else {
+      alert("Mời bạn chọn lại hình ảnh đúng định dạng !");
+      e.target.value = null;
+    }
+    e.target.value = null;
   }
 
   return (
@@ -49,19 +75,38 @@ function CreateCategoryProduct() {
             placeholder="Mời bạn nhập tên danh mục ..."
           ></input>
         </div>
-        <div className="input-group mt-5">
-          <label className="font-label">Tên danh mục mới :</label>
-          <br />
-          <JoditEditor
-            value={category.description}
-            tabIndex={1}
-            onChange={(e) => {
-              setCategory({ ...category, description: e });
-            }}
-            onBlur={(e) => {
-              setCategory({ ...category, description: e });
-            }}
-          />
+        <div className="form-group">
+          <label>Hình ảnh đại diện (chỉ chọn 1 ảnh)</label>
+
+          <div className="input-group">
+            <input onChange={handleChangeAvatar} type="file" />
+          </div>
+        </div>
+        <div className="form-group">
+          <div className="img-check">
+            {selectAvatar ? (
+              <div>
+                <img
+                  className="img-update"
+                  alt=""
+                  src={URL.createObjectURL(selectAvatar)}
+                />
+                <div className="delete-img">
+                  <button
+                    onClick={() => setSelectAvatar()}
+                    className="btn btn-danger"
+                  >
+                    <i
+                      style={{ fontSize: "15px", color: "white" }}
+                      className="fa fa-remove"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
         <div className="group-btn-action">
           <button
