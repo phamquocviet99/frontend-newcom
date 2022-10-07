@@ -22,7 +22,7 @@ function StylePage(props) {
   const [loading, setLoading] = useState(false);
   const totalPages = Math.ceil(pagination.countRows / pagination.limit);
   useEffect(() => {
-    document.title = translate('news');
+    document.title = "Collection";
     const FetchListNews = async () => {
       try {
         setLoading(true);

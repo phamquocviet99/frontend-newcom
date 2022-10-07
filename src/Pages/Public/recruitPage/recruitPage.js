@@ -11,7 +11,7 @@ function RecruitPage(props) {
   const [listRecruit, setListRecruit] = useState([]);
 
   useEffect(() => {
-    document.title = translate("recruitment");
+    document.title = "Recruitment";
     const FetchListRecruit = async () => {
       try {
         const response = await RecruitApi.getAll();

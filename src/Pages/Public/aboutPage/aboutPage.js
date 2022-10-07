@@ -22,7 +22,7 @@ function AboutPage(props) {
   const [listPartner, setListPartner] = useState([]);
   const params = useParams();
   useEffect(() => {
-    document.title=translate('about');
+    document.title="About Us";
     Aos.init({ duration: 2000 });
   }, [params]);
   useEffect(() => {

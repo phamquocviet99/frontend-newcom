@@ -14,7 +14,7 @@ function DetailRecruitPage(props) {
   const [recruit, setRecruit] = useState({});
   useEffect(() => {
     const FetchRecruit = async () => {
-      document.title = translate("recruitment");
+      document.title = "Recruitment";
       try {
         const response = await RecruitApi.getById(id);
         const data = JSON.parse(JSON.stringify(response));

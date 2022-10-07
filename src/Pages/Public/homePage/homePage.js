@@ -25,7 +25,7 @@ function HomePage(props) {
   const params = useParams();
 
   useEffect(() => {
-    document.title = translate('homepage');
+    document.title = "Home";
     Aos.init({ duration: 2000 });
   }, [params]);
   const carousel = useRef();

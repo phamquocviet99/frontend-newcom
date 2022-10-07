@@ -13,7 +13,7 @@ import ItemProduct from "../../../Components/itemProduct/itemProduct";
 
 function DetailProductPage() {
   useEffect(() => {
-    document.title = "SẢN PHẨM";
+    document.title = "Product";
   }, []);
   const [listProduct, setListProduct] = useState([]);
   const [product, setProduct] = useState({});

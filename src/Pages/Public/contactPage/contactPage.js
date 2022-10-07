@@ -13,7 +13,7 @@ function ContactPage(props) {
   const { translate } = props;
   const params = useParams();
   useEffect(() => {
-    document.title = translate('contact')
+    document.title = "Contact"
     Aos.init({ duration: 2000 });
   }, [params]);
   const [message, setMessage] = useState({

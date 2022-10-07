@@ -14,7 +14,7 @@ function DetailStylePage() {
   const [listNews, setListNews] = useState([]);
 
   useEffect(() => {
-    document.title = "TIN TỨC";
+    document.title = "Collection";
     async function FetchNews() {
       try {
         const response = await NewsApi.getById(id);

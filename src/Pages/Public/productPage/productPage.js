@@ -24,7 +24,7 @@ function ProductPage(props) {
   const [category, setCategory] = useState({});
   const [information, setInformation] = useState({});
   useEffect(() => {
-    document.title = "SẢN PHẨM";
+    document.title = "Products";
     const FetchListCategory = async () => {
       try {
         const response = await CategoryProductApi.getAll();
@@ -88,7 +88,7 @@ function ProductPage(props) {
                 </div>
               ))}
             </div>
-            <div className="contact-product-page">
+            <div className="contact-product-page mb-5">
               <i>For more information please contact :</i>
               <h4>GALAXY SYNTHETIC COMPANY</h4>
               <p>Address : Lot C14, Phu Tai Industrial Zone, Bui Thi Xuan Ward Quy Nhon City, Binh Dinh </p>
